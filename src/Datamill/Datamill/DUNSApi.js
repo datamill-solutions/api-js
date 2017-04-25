@@ -42,7 +42,7 @@
   /**
    * DUNS service.
    * @module Datamill/Datamill/DUNSApi
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**

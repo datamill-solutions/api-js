@@ -45,7 +45,7 @@
   /**
    * The BusinessDataUndeliverableContactsSearchContact model module.
    * @module Datamill/Datamill/BusinessDataUndeliverableContactsSearchContact
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**

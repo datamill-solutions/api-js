@@ -45,7 +45,7 @@
   /**
    * The PhoneMobileCheckResponse model module.
    * @module Datamill/Datamill/PhoneMobileCheckResponse
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**

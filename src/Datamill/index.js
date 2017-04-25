@@ -62,7 +62,7 @@
    * </pre>
    * </p>
    * @module Datamill/index
-   * @version 1.0.0
+   * @version 0.0.1
    */
   var exports = {
     /**

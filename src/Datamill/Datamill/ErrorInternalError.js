@@ -45,7 +45,7 @@
   /**
    * The ErrorInternalError model module.
    * @module Datamill/Datamill/ErrorInternalError
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**
