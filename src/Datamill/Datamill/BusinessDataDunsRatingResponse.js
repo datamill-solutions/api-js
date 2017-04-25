@@ -45,7 +45,7 @@
   /**
    * The BusinessDataDunsRatingResponse model module.
    * @module Datamill/Datamill/BusinessDataDunsRatingResponse
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**

@@ -45,7 +45,7 @@
   /**
    * The PhoneFormatResponse model module.
    * @module Datamill/Datamill/PhoneFormatResponse
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**

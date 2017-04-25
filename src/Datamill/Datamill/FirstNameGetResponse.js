@@ -45,7 +45,7 @@
   /**
    * The FirstNameGetResponse model module.
    * @module Datamill/Datamill/FirstNameGetResponse
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**

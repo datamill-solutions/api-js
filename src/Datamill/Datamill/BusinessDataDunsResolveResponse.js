@@ -45,7 +45,7 @@
   /**
    * The BusinessDataDunsResolveResponse model module.
    * @module Datamill/Datamill/BusinessDataDunsResolveResponse
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**

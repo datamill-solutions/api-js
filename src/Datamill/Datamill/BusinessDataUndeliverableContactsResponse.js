@@ -45,7 +45,7 @@
   /**
    * The BusinessDataUndeliverableContactsResponse model module.
    * @module Datamill/Datamill/BusinessDataUndeliverableContactsResponse
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**

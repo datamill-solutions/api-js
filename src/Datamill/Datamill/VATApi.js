@@ -42,7 +42,7 @@
   /**
    * VAT service.
    * @module Datamill/Datamill/VATApi
-   * @version 1.0.0
+   * @version 0.0.1
    */
 
   /**
