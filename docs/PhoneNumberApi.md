@@ -1,4 +1,4 @@
-# DatamillForApplications.PhoneNumberApi
+# datamill-js-client.PhoneNumberApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -19,9 +19,9 @@ Real time validation of mobile numbers without triggering a call of send a text 
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.PhoneNumberApi();
+var apiInstance = new datamill-js-client.PhoneNumberApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -74,9 +74,9 @@ Validates a given phone number and converts it to the canonical form. In additio
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.PhoneNumberApi();
+var apiInstance = new datamill-js-client.PhoneNumberApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -137,9 +137,9 @@ Resolves the national and international dial prefix for a country specified by t
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.PhoneNumberApi();
+var apiInstance = new datamill-js-client.PhoneNumberApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 

@@ -1,4 +1,4 @@
-# DatamillForApplications.GenderExtendedGetResponse
+# datamill-js-client.GenderExtendedGetResponse
 
 ## Properties
 Name | Type | Description | Notes

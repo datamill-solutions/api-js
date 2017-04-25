@@ -1,4 +1,4 @@
-# DatamillForApplications.ConvertWrapResponse
+# datamill-js-client.ConvertWrapResponse
 
 ## Properties
 Name | Type | Description | Notes

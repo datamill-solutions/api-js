@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.BusinessDataUndeliverableContactsResponse();
+    instance = new datamill-js-client.BusinessDataUndeliverableContactsResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,37 +61,37 @@
   describe('BusinessDataUndeliverableContactsResponse', function() {
     it('should create an instance of BusinessDataUndeliverableContactsResponse', function() {
       // uncomment below and update the code to test BusinessDataUndeliverableContactsResponse
-      //var instane = new DatamillForApplications.BusinessDataUndeliverableContactsResponse();
-      //expect(instance).to.be.a(DatamillForApplications.BusinessDataUndeliverableContactsResponse);
+      //var instane = new datamill-js-client.BusinessDataUndeliverableContactsResponse();
+      //expect(instance).to.be.a(datamill-js-client.BusinessDataUndeliverableContactsResponse);
     });
 
     it('should have the property undeliverable (base name: "undeliverable")', function() {
       // uncomment below and update the code to test the property undeliverable
-      //var instane = new DatamillForApplications.BusinessDataUndeliverableContactsResponse();
+      //var instane = new datamill-js-client.BusinessDataUndeliverableContactsResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property deceased (base name: "deceased")', function() {
       // uncomment below and update the code to test the property deceased
-      //var instane = new DatamillForApplications.BusinessDataUndeliverableContactsResponse();
+      //var instane = new datamill-js-client.BusinessDataUndeliverableContactsResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property moved (base name: "moved")', function() {
       // uncomment below and update the code to test the property moved
-      //var instane = new DatamillForApplications.BusinessDataUndeliverableContactsResponse();
+      //var instane = new datamill-js-client.BusinessDataUndeliverableContactsResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property newAddressAvailable (base name: "new_address_available")', function() {
       // uncomment below and update the code to test the property newAddressAvailable
-      //var instane = new DatamillForApplications.BusinessDataUndeliverableContactsResponse();
+      //var instane = new datamill-js-client.BusinessDataUndeliverableContactsResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property contact (base name: "contact")', function() {
       // uncomment below and update the code to test the property contact
-      //var instane = new DatamillForApplications.BusinessDataUndeliverableContactsResponse();
+      //var instane = new datamill-js-client.BusinessDataUndeliverableContactsResponse();
       //expect(instance).to.be();
     });
 

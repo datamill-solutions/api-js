@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.AddressSearchResponse();
+    instance = new datamill-js-client.AddressSearchResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,121 +61,121 @@
   describe('AddressSearchResponse', function() {
     it('should create an instance of AddressSearchResponse', function() {
       // uncomment below and update the code to test AddressSearchResponse
-      //var instane = new DatamillForApplications.AddressSearchResponse();
-      //expect(instance).to.be.a(DatamillForApplications.AddressSearchResponse);
+      //var instane = new datamill-js-client.AddressSearchResponse();
+      //expect(instance).to.be.a(datamill-js-client.AddressSearchResponse);
     });
 
     it('should have the property countryIso2 (base name: "country_iso_2")', function() {
       // uncomment below and update the code to test the property countryIso2
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property countryIso3 (base name: "country_iso_3")', function() {
       // uncomment below and update the code to test the property countryIso3
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property country (base name: "country")', function() {
       // uncomment below and update the code to test the property country
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property state (base name: "state")', function() {
       // uncomment below and update the code to test the property state
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property stateName (base name: "state_name")', function() {
       // uncomment below and update the code to test the property stateName
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property stateCode (base name: "state_code")', function() {
       // uncomment below and update the code to test the property stateCode
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property county (base name: "county")', function() {
       // uncomment below and update the code to test the property county
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property district (base name: "district")', function() {
       // uncomment below and update the code to test the property district
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property zip (base name: "zip")', function() {
       // uncomment below and update the code to test the property zip
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property street (base name: "street")', function() {
       // uncomment below and update the code to test the property street
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property housenumber (base name: "housenumber")', function() {
       // uncomment below and update the code to test the property housenumber
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property additionalData (base name: "additional_data")', function() {
       // uncomment below and update the code to test the property additionalData
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property relevance (base name: "relevance")', function() {
       // uncomment below and update the code to test the property relevance
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property latitude (base name: "latitude")', function() {
       // uncomment below and update the code to test the property latitude
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property longitude (base name: "longitude")', function() {
       // uncomment below and update the code to test the property longitude
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property navigationLatitude (base name: "navigation_latitude")', function() {
       // uncomment below and update the code to test the property navigationLatitude
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property navigationLongitude (base name: "navigation_longitude")', function() {
       // uncomment below and update the code to test the property navigationLongitude
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property matchlevel (base name: "matchlevel")', function() {
       // uncomment below and update the code to test the property matchlevel
-      //var instane = new DatamillForApplications.AddressSearchResponse();
+      //var instane = new datamill-js-client.AddressSearchResponse();
       //expect(instance).to.be();
     });
 

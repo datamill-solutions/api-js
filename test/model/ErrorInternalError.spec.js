@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.ErrorInternalError();
+    instance = new datamill-js-client.ErrorInternalError();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,8 +61,8 @@
   describe('ErrorInternalError', function() {
     it('should create an instance of ErrorInternalError', function() {
       // uncomment below and update the code to test ErrorInternalError
-      //var instane = new DatamillForApplications.ErrorInternalError();
-      //expect(instance).to.be.a(DatamillForApplications.ErrorInternalError);
+      //var instane = new datamill-js-client.ErrorInternalError();
+      //expect(instance).to.be.a(datamill-js-client.ErrorInternalError);
     });
 
   });

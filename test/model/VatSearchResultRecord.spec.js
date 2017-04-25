@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.VatSearchResultRecord();
+    instance = new datamill-js-client.VatSearchResultRecord();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('VatSearchResultRecord', function() {
     it('should create an instance of VatSearchResultRecord', function() {
       // uncomment below and update the code to test VatSearchResultRecord
-      //var instane = new DatamillForApplications.VatSearchResultRecord();
-      //expect(instance).to.be.a(DatamillForApplications.VatSearchResultRecord);
+      //var instane = new datamill-js-client.VatSearchResultRecord();
+      //expect(instance).to.be.a(datamill-js-client.VatSearchResultRecord);
     });
 
     it('should have the property vatnumber (base name: "vatnumber")', function() {
       // uncomment below and update the code to test the property vatnumber
-      //var instane = new DatamillForApplications.VatSearchResultRecord();
+      //var instane = new datamill-js-client.VatSearchResultRecord();
       //expect(instance).to.be();
     });
 
     it('should have the property company (base name: "company")', function() {
       // uncomment below and update the code to test the property company
-      //var instane = new DatamillForApplications.VatSearchResultRecord();
+      //var instane = new datamill-js-client.VatSearchResultRecord();
       //expect(instance).to.be();
     });
 
     it('should have the property address (base name: "address")', function() {
       // uncomment below and update the code to test the property address
-      //var instane = new DatamillForApplications.VatSearchResultRecord();
+      //var instane = new datamill-js-client.VatSearchResultRecord();
       //expect(instance).to.be();
     });
 

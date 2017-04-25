@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.VatCheckResponse();
+    instance = new datamill-js-client.VatCheckResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('VatCheckResponse', function() {
     it('should create an instance of VatCheckResponse', function() {
       // uncomment below and update the code to test VatCheckResponse
-      //var instane = new DatamillForApplications.VatCheckResponse();
-      //expect(instance).to.be.a(DatamillForApplications.VatCheckResponse);
+      //var instane = new datamill-js-client.VatCheckResponse();
+      //expect(instance).to.be.a(datamill-js-client.VatCheckResponse);
     });
 
     it('should have the property valid (base name: "valid")', function() {
       // uncomment below and update the code to test the property valid
-      //var instane = new DatamillForApplications.VatCheckResponse();
+      //var instane = new datamill-js-client.VatCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property countrycode (base name: "countrycode")', function() {
       // uncomment below and update the code to test the property countrycode
-      //var instane = new DatamillForApplications.VatCheckResponse();
+      //var instane = new datamill-js-client.VatCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property vatnumber (base name: "vatnumber")', function() {
       // uncomment below and update the code to test the property vatnumber
-      //var instane = new DatamillForApplications.VatCheckResponse();
+      //var instane = new datamill-js-client.VatCheckResponse();
       //expect(instance).to.be();
     });
 

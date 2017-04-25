@@ -1,4 +1,4 @@
-# DatamillForApplications.ConvertLowerCaseResponse
+# datamill-js-client.ConvertLowerCaseResponse
 
 ## Properties
 Name | Type | Description | Notes

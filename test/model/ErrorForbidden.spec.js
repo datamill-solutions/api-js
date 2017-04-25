@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.ErrorForbidden();
+    instance = new datamill-js-client.ErrorForbidden();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('ErrorForbidden', function() {
     it('should create an instance of ErrorForbidden', function() {
       // uncomment below and update the code to test ErrorForbidden
-      //var instane = new DatamillForApplications.ErrorForbidden();
-      //expect(instance).to.be.a(DatamillForApplications.ErrorForbidden);
+      //var instane = new datamill-js-client.ErrorForbidden();
+      //expect(instance).to.be.a(datamill-js-client.ErrorForbidden);
     });
 
     it('should have the property errorcode (base name: "errorcode")', function() {
       // uncomment below and update the code to test the property errorcode
-      //var instane = new DatamillForApplications.ErrorForbidden();
+      //var instane = new datamill-js-client.ErrorForbidden();
       //expect(instance).to.be();
     });
 
     it('should have the property errormessage (base name: "errormessage")', function() {
       // uncomment below and update the code to test the property errormessage
-      //var instane = new DatamillForApplications.ErrorForbidden();
+      //var instane = new datamill-js-client.ErrorForbidden();
       //expect(instance).to.be();
     });
 

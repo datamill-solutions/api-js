@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.PhoneCountryCodeGetResponse();
+    instance = new datamill-js-client.PhoneCountryCodeGetResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('PhoneCountryCodeGetResponse', function() {
     it('should create an instance of PhoneCountryCodeGetResponse', function() {
       // uncomment below and update the code to test PhoneCountryCodeGetResponse
-      //var instane = new DatamillForApplications.PhoneCountryCodeGetResponse();
-      //expect(instance).to.be.a(DatamillForApplications.PhoneCountryCodeGetResponse);
+      //var instane = new datamill-js-client.PhoneCountryCodeGetResponse();
+      //expect(instance).to.be.a(datamill-js-client.PhoneCountryCodeGetResponse);
     });
 
     it('should have the property countrycode (base name: "countrycode")', function() {
       // uncomment below and update the code to test the property countrycode
-      //var instane = new DatamillForApplications.PhoneCountryCodeGetResponse();
+      //var instane = new datamill-js-client.PhoneCountryCodeGetResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property internationalPrefix (base name: "international_prefix")', function() {
       // uncomment below and update the code to test the property internationalPrefix
-      //var instane = new DatamillForApplications.PhoneCountryCodeGetResponse();
+      //var instane = new datamill-js-client.PhoneCountryCodeGetResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property nationalPrefix (base name: "national_prefix")', function() {
       // uncomment below and update the code to test the property nationalPrefix
-      //var instane = new DatamillForApplications.PhoneCountryCodeGetResponse();
+      //var instane = new datamill-js-client.PhoneCountryCodeGetResponse();
       //expect(instance).to.be();
     });
 

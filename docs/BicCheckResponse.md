@@ -1,4 +1,4 @@
-# DatamillForApplications.BicCheckResponse
+# datamill-js-client.BicCheckResponse
 
 ## Properties
 Name | Type | Description | Notes

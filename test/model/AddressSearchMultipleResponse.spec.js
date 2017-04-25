@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.AddressSearchMultipleResponse();
+    instance = new datamill-js-client.AddressSearchMultipleResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('AddressSearchMultipleResponse', function() {
     it('should create an instance of AddressSearchMultipleResponse', function() {
       // uncomment below and update the code to test AddressSearchMultipleResponse
-      //var instane = new DatamillForApplications.AddressSearchMultipleResponse();
-      //expect(instance).to.be.a(DatamillForApplications.AddressSearchMultipleResponse);
+      //var instane = new datamill-js-client.AddressSearchMultipleResponse();
+      //expect(instance).to.be.a(datamill-js-client.AddressSearchMultipleResponse);
     });
 
     it('should have the property addresses (base name: "addresses")', function() {
       // uncomment below and update the code to test the property addresses
-      //var instane = new DatamillForApplications.AddressSearchMultipleResponse();
+      //var instane = new datamill-js-client.AddressSearchMultipleResponse();
       //expect(instance).to.be();
     });
 

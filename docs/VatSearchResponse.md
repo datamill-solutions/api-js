@@ -1,4 +1,4 @@
-# DatamillForApplications.VatSearchResponse
+# datamill-js-client.VatSearchResponse
 
 ## Properties
 Name | Type | Description | Notes

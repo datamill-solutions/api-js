@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.FirstNameGetResponse();
+    instance = new datamill-js-client.FirstNameGetResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('FirstNameGetResponse', function() {
     it('should create an instance of FirstNameGetResponse', function() {
       // uncomment below and update the code to test FirstNameGetResponse
-      //var instane = new DatamillForApplications.FirstNameGetResponse();
-      //expect(instance).to.be.a(DatamillForApplications.FirstNameGetResponse);
+      //var instane = new datamill-js-client.FirstNameGetResponse();
+      //expect(instance).to.be.a(datamill-js-client.FirstNameGetResponse);
     });
 
     it('should have the property firstname (base name: "firstname")', function() {
       // uncomment below and update the code to test the property firstname
-      //var instane = new DatamillForApplications.FirstNameGetResponse();
+      //var instane = new datamill-js-client.FirstNameGetResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property name (base name: "name")', function() {
       // uncomment below and update the code to test the property name
-      //var instane = new DatamillForApplications.FirstNameGetResponse();
+      //var instane = new datamill-js-client.FirstNameGetResponse();
       //expect(instance).to.be();
     });
 

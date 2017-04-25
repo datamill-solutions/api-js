@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.UrlCheckResponse();
+    instance = new datamill-js-client.UrlCheckResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,91 +61,91 @@
   describe('UrlCheckResponse', function() {
     it('should create an instance of UrlCheckResponse', function() {
       // uncomment below and update the code to test UrlCheckResponse
-      //var instane = new DatamillForApplications.UrlCheckResponse();
-      //expect(instance).to.be.a(DatamillForApplications.UrlCheckResponse);
+      //var instane = new datamill-js-client.UrlCheckResponse();
+      //expect(instance).to.be.a(datamill-js-client.UrlCheckResponse);
     });
 
     it('should have the property valid (base name: "valid")', function() {
       // uncomment below and update the code to test the property valid
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property url (base name: "url")', function() {
       // uncomment below and update the code to test the property url
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property httpCode (base name: "http_code")', function() {
       // uncomment below and update the code to test the property httpCode
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property totalTime (base name: "total_time")', function() {
       // uncomment below and update the code to test the property totalTime
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property namelookupTime (base name: "namelookup_time")', function() {
       // uncomment below and update the code to test the property namelookupTime
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property connectTime (base name: "connect_time")', function() {
       // uncomment below and update the code to test the property connectTime
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property pretransferTime (base name: "pretransfer_time")', function() {
       // uncomment below and update the code to test the property pretransferTime
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property starttransferTime (base name: "starttransfer_time")', function() {
       // uncomment below and update the code to test the property starttransferTime
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property primaryIp (base name: "primary_ip")', function() {
       // uncomment below and update the code to test the property primaryIp
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property primaryPort (base name: "primary_port")', function() {
       // uncomment below and update the code to test the property primaryPort
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property downloadContentLength (base name: "download_content_length")', function() {
       // uncomment below and update the code to test the property downloadContentLength
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property contentType (base name: "content_type")', function() {
       // uncomment below and update the code to test the property contentType
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property redirects (base name: "redirects")', function() {
       // uncomment below and update the code to test the property redirects
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property parameters (base name: "parameters")', function() {
       // uncomment below and update the code to test the property parameters
-      //var instane = new DatamillForApplications.UrlCheckResponse();
+      //var instane = new datamill-js-client.UrlCheckResponse();
       //expect(instance).to.be();
     });
 

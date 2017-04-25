@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.GenderExtendedGetResponse();
+    instance = new datamill-js-client.GenderExtendedGetResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('GenderExtendedGetResponse', function() {
     it('should create an instance of GenderExtendedGetResponse', function() {
       // uncomment below and update the code to test GenderExtendedGetResponse
-      //var instane = new DatamillForApplications.GenderExtendedGetResponse();
-      //expect(instance).to.be.a(DatamillForApplications.GenderExtendedGetResponse);
+      //var instane = new datamill-js-client.GenderExtendedGetResponse();
+      //expect(instance).to.be.a(datamill-js-client.GenderExtendedGetResponse);
     });
 
     it('should have the property gender (base name: "gender")', function() {
       // uncomment below and update the code to test the property gender
-      //var instane = new DatamillForApplications.GenderExtendedGetResponse();
+      //var instane = new datamill-js-client.GenderExtendedGetResponse();
       //expect(instance).to.be();
     });
 

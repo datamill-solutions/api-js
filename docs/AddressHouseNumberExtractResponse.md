@@ -1,4 +1,4 @@
-# DatamillForApplications.AddressHouseNumberExtractResponse
+# datamill-js-client.AddressHouseNumberExtractResponse
 
 ## Properties
 Name | Type | Description | Notes

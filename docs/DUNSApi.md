@@ -1,4 +1,4 @@
-# DatamillForApplications.DUNSApi
+# datamill-js-client.DUNSApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -19,9 +19,9 @@ Get marketing information about a company (credit rating, PAYDEX score, demograp
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.DUNSApi();
+var apiInstance = new datamill-js-client.DUNSApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -74,9 +74,9 @@ Resolves company information (official name, postal address, annual turnover, nu
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.DUNSApi();
+var apiInstance = new datamill-js-client.DUNSApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -129,9 +129,9 @@ Finds the D-U-N-S number and additional company information by the company&#39;s
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.DUNSApi();
+var apiInstance = new datamill-js-client.DUNSApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 

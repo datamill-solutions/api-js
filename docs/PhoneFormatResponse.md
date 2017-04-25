@@ -1,4 +1,4 @@
-# DatamillForApplications.PhoneFormatResponse
+# datamill-js-client.PhoneFormatResponse
 
 ## Properties
 Name | Type | Description | Notes

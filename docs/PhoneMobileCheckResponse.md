@@ -1,4 +1,4 @@
-# DatamillForApplications.PhoneMobileCheckResponse
+# datamill-js-client.PhoneMobileCheckResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.BicCheckResponse();
+    instance = new datamill-js-client.BicCheckResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('BicCheckResponse', function() {
     it('should create an instance of BicCheckResponse', function() {
       // uncomment below and update the code to test BicCheckResponse
-      //var instane = new DatamillForApplications.BicCheckResponse();
-      //expect(instance).to.be.a(DatamillForApplications.BicCheckResponse);
+      //var instane = new datamill-js-client.BicCheckResponse();
+      //expect(instance).to.be.a(datamill-js-client.BicCheckResponse);
     });
 
     it('should have the property valid (base name: "valid")', function() {
       // uncomment below and update the code to test the property valid
-      //var instane = new DatamillForApplications.BicCheckResponse();
+      //var instane = new datamill-js-client.BicCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property bic (base name: "bic")', function() {
       // uncomment below and update the code to test the property bic
-      //var instane = new DatamillForApplications.BicCheckResponse();
+      //var instane = new datamill-js-client.BicCheckResponse();
       //expect(instance).to.be();
     });
 

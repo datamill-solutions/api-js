@@ -1,4 +1,4 @@
-# DatamillForApplications.GenderApi
+# datamill-js-client.GenderApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -18,9 +18,9 @@ Recognizes the gender of a given first name. (Works only with common first names
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.GenderApi();
+var apiInstance = new datamill-js-client.GenderApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -70,9 +70,9 @@ Recognizes the gender of a given first name considering country specific peculia
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.GenderApi();
+var apiInstance = new datamill-js-client.GenderApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 

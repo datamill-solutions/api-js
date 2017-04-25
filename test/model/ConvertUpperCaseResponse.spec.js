@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.ConvertUpperCaseResponse();
+    instance = new datamill-js-client.ConvertUpperCaseResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('ConvertUpperCaseResponse', function() {
     it('should create an instance of ConvertUpperCaseResponse', function() {
       // uncomment below and update the code to test ConvertUpperCaseResponse
-      //var instane = new DatamillForApplications.ConvertUpperCaseResponse();
-      //expect(instance).to.be.a(DatamillForApplications.ConvertUpperCaseResponse);
+      //var instane = new datamill-js-client.ConvertUpperCaseResponse();
+      //expect(instance).to.be.a(datamill-js-client.ConvertUpperCaseResponse);
     });
 
     it('should have the property text (base name: "text")', function() {
       // uncomment below and update the code to test the property text
-      //var instane = new DatamillForApplications.ConvertUpperCaseResponse();
+      //var instane = new datamill-js-client.ConvertUpperCaseResponse();
       //expect(instance).to.be();
     });
 

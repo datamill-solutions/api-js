@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.ErrorQuotaExceeded();
+    instance = new datamill-js-client.ErrorQuotaExceeded();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('ErrorQuotaExceeded', function() {
     it('should create an instance of ErrorQuotaExceeded', function() {
       // uncomment below and update the code to test ErrorQuotaExceeded
-      //var instane = new DatamillForApplications.ErrorQuotaExceeded();
-      //expect(instance).to.be.a(DatamillForApplications.ErrorQuotaExceeded);
+      //var instane = new datamill-js-client.ErrorQuotaExceeded();
+      //expect(instance).to.be.a(datamill-js-client.ErrorQuotaExceeded);
     });
 
     it('should have the property credits (base name: "credits")', function() {
       // uncomment below and update the code to test the property credits
-      //var instane = new DatamillForApplications.ErrorQuotaExceeded();
+      //var instane = new datamill-js-client.ErrorQuotaExceeded();
       //expect(instance).to.be();
     });
 

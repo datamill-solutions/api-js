@@ -1,4 +1,4 @@
-# DatamillForApplications.VatResolveResponse
+# datamill-js-client.VatResolveResponse
 
 ## Properties
 Name | Type | Description | Notes

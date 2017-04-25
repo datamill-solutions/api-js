@@ -1,4 +1,4 @@
-# DatamillForApplications.FirstNameGetResponse
+# datamill-js-client.FirstNameGetResponse
 
 ## Properties
 Name | Type | Description | Notes

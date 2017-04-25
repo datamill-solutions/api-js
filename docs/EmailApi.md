@@ -1,4 +1,4 @@
-# DatamillForApplications.EmailApi
+# datamill-js-client.EmailApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -19,9 +19,9 @@ Checks the spelling of an email address to detect typos and spelling errors. In 
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.EmailApi();
+var apiInstance = new datamill-js-client.EmailApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -71,9 +71,9 @@ Checks the spelling of an email address to detect typos and spelling errors. If 
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.EmailApi();
+var apiInstance = new datamill-js-client.EmailApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -123,9 +123,9 @@ Checks the spelling of an email address to detect typos and spelling errors.
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.EmailApi();
+var apiInstance = new datamill-js-client.EmailApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 

@@ -1,4 +1,4 @@
-# DatamillForApplications.ConvertApi
+# datamill-js-client.ConvertApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -20,9 +20,9 @@ Changes any word of a given text so that the first letter is capitalized and all
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.ConvertApi();
+var apiInstance = new datamill-js-client.ConvertApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -72,9 +72,9 @@ Converts all letters of any word in a given string in the respective lowercase.
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.ConvertApi();
+var apiInstance = new datamill-js-client.ConvertApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -124,9 +124,9 @@ Converts all letters of any word in a given string in the respective capital.
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.ConvertApi();
+var apiInstance = new datamill-js-client.ConvertApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -176,9 +176,9 @@ Breaks a text into multiple newlines. Each line will be separated by a \\r (CR, 
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.ConvertApi();
+var apiInstance = new datamill-js-client.ConvertApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 

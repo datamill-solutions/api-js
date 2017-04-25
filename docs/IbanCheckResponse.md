@@ -1,4 +1,4 @@
-# DatamillForApplications.IbanCheckResponse
+# datamill-js-client.IbanCheckResponse
 
 ## Properties
 Name | Type | Description | Notes

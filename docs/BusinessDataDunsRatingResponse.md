@@ -1,4 +1,4 @@
-# DatamillForApplications.BusinessDataDunsRatingResponse
+# datamill-js-client.BusinessDataDunsRatingResponse
 
 ## Properties
 Name | Type | Description | Notes

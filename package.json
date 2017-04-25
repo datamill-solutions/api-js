@@ -1,9 +1,9 @@
 {
-  "name": "datamill_for_applications",
-  "version": "1.6.4",
-  "description": "47data_mill_for_applications_is_the_most_versatile_and_powerful_API_for_all_aspects_of_data_quality_in_your_business_application_Use_47data_mill_to_check_correct_and_enrich_personal_data_and_business_information__The_internationally_applicable_functions_can_be_integrated_easily_into_existing_applications_whether_desktop_online_or_mobile_and_thus_enable_you_to_professionally_improve_your_customer_or_supplier_database_directly_in_your_system__Due_to_47data_mills_pay_per_use_credit_model_there_are_no_setup_fees_or_fixed_monthly_subscription_fees_47data_mill_is_constantly_evolving_and_upgraded_with_the_latest_technology_and_data_services_available_on_the_market_",
+  "name": "datamill-js-client",
+  "version": "1.0.0",
+  "description": "Client library of datamill solutions API",
   "license": "Apache-2.0",
-  "main": "src/index.js",
+  "main": "src/Datamill/index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha --recursive"
   },
