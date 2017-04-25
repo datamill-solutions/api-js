@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.VatSearchResponse();
+    instance = new datamill-js-client.VatSearchResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('VatSearchResponse', function() {
     it('should create an instance of VatSearchResponse', function() {
       // uncomment below and update the code to test VatSearchResponse
-      //var instane = new DatamillForApplications.VatSearchResponse();
-      //expect(instance).to.be.a(DatamillForApplications.VatSearchResponse);
+      //var instane = new datamill-js-client.VatSearchResponse();
+      //expect(instance).to.be.a(datamill-js-client.VatSearchResponse);
     });
 
     it('should have the property result (base name: "result")', function() {
       // uncomment below and update the code to test the property result
-      //var instane = new DatamillForApplications.VatSearchResponse();
+      //var instane = new datamill-js-client.VatSearchResponse();
       //expect(instance).to.be();
     });
 

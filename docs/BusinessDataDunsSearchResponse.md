@@ -1,4 +1,4 @@
-# DatamillForApplications.BusinessDataDunsSearchResponse
+# datamill-js-client.BusinessDataDunsSearchResponse
 
 ## Properties
 Name | Type | Description | Notes

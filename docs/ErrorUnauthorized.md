@@ -1,4 +1,4 @@
-# DatamillForApplications.ErrorUnauthorized
+# datamill-js-client.ErrorUnauthorized
 
 ## Properties
 Name | Type | Description | Notes

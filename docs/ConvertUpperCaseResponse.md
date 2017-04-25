@@ -1,4 +1,4 @@
-# DatamillForApplications.ConvertUpperCaseResponse
+# datamill-js-client.ConvertUpperCaseResponse
 
 ## Properties
 Name | Type | Description | Notes

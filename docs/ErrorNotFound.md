@@ -1,4 +1,4 @@
-# DatamillForApplications.ErrorNotFound
+# datamill-js-client.ErrorNotFound
 
 ## Properties
 Name | Type | Description | Notes

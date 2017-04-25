@@ -1,4 +1,4 @@
-# DatamillForApplications.PhoneCountryCodeGetResponse
+# datamill-js-client.PhoneCountryCodeGetResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.PhoneFormatResponse();
+    instance = new datamill-js-client.PhoneFormatResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('PhoneFormatResponse', function() {
     it('should create an instance of PhoneFormatResponse', function() {
       // uncomment below and update the code to test PhoneFormatResponse
-      //var instane = new DatamillForApplications.PhoneFormatResponse();
-      //expect(instance).to.be.a(DatamillForApplications.PhoneFormatResponse);
+      //var instane = new datamill-js-client.PhoneFormatResponse();
+      //expect(instance).to.be.a(datamill-js-client.PhoneFormatResponse);
     });
 
     it('should have the property valid (base name: "valid")', function() {
       // uncomment below and update the code to test the property valid
-      //var instane = new DatamillForApplications.PhoneFormatResponse();
+      //var instane = new datamill-js-client.PhoneFormatResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property _number (base name: "number")', function() {
       // uncomment below and update the code to test the property _number
-      //var instane = new DatamillForApplications.PhoneFormatResponse();
+      //var instane = new datamill-js-client.PhoneFormatResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property type (base name: "type")', function() {
       // uncomment below and update the code to test the property type
-      //var instane = new DatamillForApplications.PhoneFormatResponse();
+      //var instane = new datamill-js-client.PhoneFormatResponse();
       //expect(instance).to.be();
     });
 

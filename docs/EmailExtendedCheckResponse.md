@@ -1,4 +1,4 @@
-# DatamillForApplications.EmailExtendedCheckResponse
+# datamill-js-client.EmailExtendedCheckResponse
 
 ## Properties
 Name | Type | Description | Notes

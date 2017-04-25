@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.BusinessDataDunsSearchResult();
+    instance = new datamill-js-client.BusinessDataDunsSearchResult();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,73 +61,73 @@
   describe('BusinessDataDunsSearchResult', function() {
     it('should create an instance of BusinessDataDunsSearchResult', function() {
       // uncomment below and update the code to test BusinessDataDunsSearchResult
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
-      //expect(instance).to.be.a(DatamillForApplications.BusinessDataDunsSearchResult);
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
+      //expect(instance).to.be.a(datamill-js-client.BusinessDataDunsSearchResult);
     });
 
     it('should have the property companyName (base name: "company_name")', function() {
       // uncomment below and update the code to test the property companyName
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property city (base name: "city")', function() {
       // uncomment below and update the code to test the property city
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property zip (base name: "zip")', function() {
       // uncomment below and update the code to test the property zip
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property street (base name: "street")', function() {
       // uncomment below and update the code to test the property street
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property houseNumber (base name: "house_number")', function() {
       // uncomment below and update the code to test the property houseNumber
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property dunsNumber (base name: "duns_number")', function() {
       // uncomment below and update the code to test the property dunsNumber
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property dunsNumberHq (base name: "duns_number_hq")', function() {
       // uncomment below and update the code to test the property dunsNumberHq
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property phoneNumber (base name: "phone_number")', function() {
       // uncomment below and update the code to test the property phoneNumber
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property branchCode (base name: "branch_code")', function() {
       // uncomment below and update the code to test the property branchCode
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property branchDescription (base name: "branch_description")', function() {
       // uncomment below and update the code to test the property branchDescription
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 
     it('should have the property score (base name: "score")', function() {
       // uncomment below and update the code to test the property score
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResult();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResult();
       //expect(instance).to.be();
     });
 

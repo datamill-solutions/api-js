@@ -1,4 +1,4 @@
-# DatamillForApplications.VatCheckResponse
+# datamill-js-client.VatCheckResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# DatamillForApplications.VATApi
+# datamill-js-client.VATApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -19,9 +19,9 @@ Checks if a given VAT (Value Added Tax) identification number is valid or not. O
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.VATApi();
+var apiInstance = new datamill-js-client.VATApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -71,9 +71,9 @@ Resolves company information (company name and postal address) based on the comp
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.VATApi();
+var apiInstance = new datamill-js-client.VATApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -127,9 +127,9 @@ Finds the VAT number and additional company information by the company&#39;s nam
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.VATApi();
+var apiInstance = new datamill-js-client.VATApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 

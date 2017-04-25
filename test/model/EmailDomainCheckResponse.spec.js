@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.EmailDomainCheckResponse();
+    instance = new datamill-js-client.EmailDomainCheckResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('EmailDomainCheckResponse', function() {
     it('should create an instance of EmailDomainCheckResponse', function() {
       // uncomment below and update the code to test EmailDomainCheckResponse
-      //var instane = new DatamillForApplications.EmailDomainCheckResponse();
-      //expect(instance).to.be.a(DatamillForApplications.EmailDomainCheckResponse);
+      //var instane = new datamill-js-client.EmailDomainCheckResponse();
+      //expect(instance).to.be.a(datamill-js-client.EmailDomainCheckResponse);
     });
 
     it('should have the property valid (base name: "valid")', function() {
       // uncomment below and update the code to test the property valid
-      //var instane = new DatamillForApplications.EmailDomainCheckResponse();
+      //var instane = new datamill-js-client.EmailDomainCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new DatamillForApplications.EmailDomainCheckResponse();
+      //var instane = new datamill-js-client.EmailDomainCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property statusCode (base name: "status_code")', function() {
       // uncomment below and update the code to test the property statusCode
-      //var instane = new DatamillForApplications.EmailDomainCheckResponse();
+      //var instane = new datamill-js-client.EmailDomainCheckResponse();
       //expect(instance).to.be();
     });
 

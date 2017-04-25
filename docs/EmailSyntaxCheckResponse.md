@@ -1,4 +1,4 @@
-# DatamillForApplications.EmailSyntaxCheckResponse
+# datamill-js-client.EmailSyntaxCheckResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# DatamillForApplications.ErrorQuotaExceeded
+# datamill-js-client.ErrorQuotaExceeded
 
 ## Properties
 Name | Type | Description | Notes

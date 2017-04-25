@@ -1,4 +1,4 @@
-# DatamillForApplications.ErrorForbidden
+# datamill-js-client.ErrorForbidden
 
 ## Properties
 Name | Type | Description | Notes

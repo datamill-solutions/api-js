@@ -1,4 +1,4 @@
-# DatamillForApplications.AddressApi
+# datamill-js-client.AddressApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -20,9 +20,9 @@ Find and extract the house number based on partial address information. The resu
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.AddressApi();
+var apiInstance = new datamill-js-client.AddressApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -75,9 +75,9 @@ Resolve an address corresponding to a given geo-coordinate. The result is a sing
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.AddressApi();
+var apiInstance = new datamill-js-client.AddressApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -134,9 +134,9 @@ Find geo-location based on unstructured (single-line entry, un-qualified) or bas
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.AddressApi();
+var apiInstance = new datamill-js-client.AddressApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
@@ -205,9 +205,9 @@ Find multiple geo-locations based on unstructured (single-line entry, un-qualifi
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.AddressApi();
+var apiInstance = new datamill-js-client.AddressApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 

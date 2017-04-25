@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.IbanCheckResponse();
+    instance = new datamill-js-client.IbanCheckResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('IbanCheckResponse', function() {
     it('should create an instance of IbanCheckResponse', function() {
       // uncomment below and update the code to test IbanCheckResponse
-      //var instane = new DatamillForApplications.IbanCheckResponse();
-      //expect(instance).to.be.a(DatamillForApplications.IbanCheckResponse);
+      //var instane = new datamill-js-client.IbanCheckResponse();
+      //expect(instance).to.be.a(datamill-js-client.IbanCheckResponse);
     });
 
     it('should have the property valid (base name: "valid")', function() {
       // uncomment below and update the code to test the property valid
-      //var instane = new DatamillForApplications.IbanCheckResponse();
+      //var instane = new datamill-js-client.IbanCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property iban (base name: "iban")', function() {
       // uncomment below and update the code to test the property iban
-      //var instane = new DatamillForApplications.IbanCheckResponse();
+      //var instane = new datamill-js-client.IbanCheckResponse();
       //expect(instance).to.be();
     });
 

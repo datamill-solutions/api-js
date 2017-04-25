@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.ConvertCapitalFirstResponse();
+    instance = new datamill-js-client.ConvertCapitalFirstResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,13 +61,13 @@
   describe('ConvertCapitalFirstResponse', function() {
     it('should create an instance of ConvertCapitalFirstResponse', function() {
       // uncomment below and update the code to test ConvertCapitalFirstResponse
-      //var instane = new DatamillForApplications.ConvertCapitalFirstResponse();
-      //expect(instance).to.be.a(DatamillForApplications.ConvertCapitalFirstResponse);
+      //var instane = new datamill-js-client.ConvertCapitalFirstResponse();
+      //expect(instance).to.be.a(datamill-js-client.ConvertCapitalFirstResponse);
     });
 
     it('should have the property text (base name: "text")', function() {
       // uncomment below and update the code to test the property text
-      //var instane = new DatamillForApplications.ConvertCapitalFirstResponse();
+      //var instane = new datamill-js-client.ConvertCapitalFirstResponse();
       //expect(instance).to.be();
     });
 

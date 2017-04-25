@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.ErrorMissingParameters();
+    instance = new datamill-js-client.ErrorMissingParameters();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('ErrorMissingParameters', function() {
     it('should create an instance of ErrorMissingParameters', function() {
       // uncomment below and update the code to test ErrorMissingParameters
-      //var instane = new DatamillForApplications.ErrorMissingParameters();
-      //expect(instance).to.be.a(DatamillForApplications.ErrorMissingParameters);
+      //var instane = new datamill-js-client.ErrorMissingParameters();
+      //expect(instance).to.be.a(datamill-js-client.ErrorMissingParameters);
     });
 
     it('should have the property errorcode (base name: "errorcode")', function() {
       // uncomment below and update the code to test the property errorcode
-      //var instane = new DatamillForApplications.ErrorMissingParameters();
+      //var instane = new datamill-js-client.ErrorMissingParameters();
       //expect(instance).to.be();
     });
 
     it('should have the property errormessage (base name: "errormessage")', function() {
       // uncomment below and update the code to test the property errormessage
-      //var instane = new DatamillForApplications.ErrorMissingParameters();
+      //var instane = new datamill-js-client.ErrorMissingParameters();
       //expect(instance).to.be();
     });
 
     it('should have the property errorDescription (base name: "error_description")', function() {
       // uncomment below and update the code to test the property errorDescription
-      //var instane = new DatamillForApplications.ErrorMissingParameters();
+      //var instane = new datamill-js-client.ErrorMissingParameters();
       //expect(instance).to.be();
     });
 

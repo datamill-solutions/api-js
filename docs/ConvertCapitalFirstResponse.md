@@ -1,4 +1,4 @@
-# DatamillForApplications.ConvertCapitalFirstResponse
+# datamill-js-client.ConvertCapitalFirstResponse
 
 ## Properties
 Name | Type | Description | Notes

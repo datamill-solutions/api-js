@@ -1,4 +1,4 @@
-# DatamillForApplications.BusinessDataUndeliverableContactsResponse
+# datamill-js-client.BusinessDataUndeliverableContactsResponse
 
 ## Properties
 Name | Type | Description | Notes

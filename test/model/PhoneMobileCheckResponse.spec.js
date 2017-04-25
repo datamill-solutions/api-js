@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.PhoneMobileCheckResponse();
+    instance = new datamill-js-client.PhoneMobileCheckResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('PhoneMobileCheckResponse', function() {
     it('should create an instance of PhoneMobileCheckResponse', function() {
       // uncomment below and update the code to test PhoneMobileCheckResponse
-      //var instane = new DatamillForApplications.PhoneMobileCheckResponse();
-      //expect(instance).to.be.a(DatamillForApplications.PhoneMobileCheckResponse);
+      //var instane = new datamill-js-client.PhoneMobileCheckResponse();
+      //expect(instance).to.be.a(datamill-js-client.PhoneMobileCheckResponse);
     });
 
     it('should have the property phonenumber (base name: "phonenumber")', function() {
       // uncomment below and update the code to test the property phonenumber
-      //var instane = new DatamillForApplications.PhoneMobileCheckResponse();
+      //var instane = new datamill-js-client.PhoneMobileCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new DatamillForApplications.PhoneMobileCheckResponse();
+      //var instane = new datamill-js-client.PhoneMobileCheckResponse();
       //expect(instance).to.be();
     });
 

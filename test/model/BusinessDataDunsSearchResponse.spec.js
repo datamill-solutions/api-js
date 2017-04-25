@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.BusinessDataDunsSearchResponse();
+    instance = new datamill-js-client.BusinessDataDunsSearchResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('BusinessDataDunsSearchResponse', function() {
     it('should create an instance of BusinessDataDunsSearchResponse', function() {
       // uncomment below and update the code to test BusinessDataDunsSearchResponse
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResponse();
-      //expect(instance).to.be.a(DatamillForApplications.BusinessDataDunsSearchResponse);
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResponse();
+      //expect(instance).to.be.a(datamill-js-client.BusinessDataDunsSearchResponse);
     });
 
     it('should have the property status (base name: "status")', function() {
       // uncomment below and update the code to test the property status
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResponse();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property results (base name: "results")', function() {
       // uncomment below and update the code to test the property results
-      //var instane = new DatamillForApplications.BusinessDataDunsSearchResponse();
+      //var instane = new datamill-js-client.BusinessDataDunsSearchResponse();
       //expect(instance).to.be();
     });
 

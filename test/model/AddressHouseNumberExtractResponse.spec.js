@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.AddressHouseNumberExtractResponse();
+    instance = new datamill-js-client.AddressHouseNumberExtractResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,31 +61,31 @@
   describe('AddressHouseNumberExtractResponse', function() {
     it('should create an instance of AddressHouseNumberExtractResponse', function() {
       // uncomment below and update the code to test AddressHouseNumberExtractResponse
-      //var instane = new DatamillForApplications.AddressHouseNumberExtractResponse();
-      //expect(instance).to.be.a(DatamillForApplications.AddressHouseNumberExtractResponse);
+      //var instane = new datamill-js-client.AddressHouseNumberExtractResponse();
+      //expect(instance).to.be.a(datamill-js-client.AddressHouseNumberExtractResponse);
     });
 
     it('should have the property street (base name: "street")', function() {
       // uncomment below and update the code to test the property street
-      //var instane = new DatamillForApplications.AddressHouseNumberExtractResponse();
+      //var instane = new datamill-js-client.AddressHouseNumberExtractResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property housenumber (base name: "housenumber")', function() {
       // uncomment below and update the code to test the property housenumber
-      //var instane = new DatamillForApplications.AddressHouseNumberExtractResponse();
+      //var instane = new datamill-js-client.AddressHouseNumberExtractResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property housenumberOnly (base name: "housenumber_only")', function() {
       // uncomment below and update the code to test the property housenumberOnly
-      //var instane = new DatamillForApplications.AddressHouseNumberExtractResponse();
+      //var instane = new datamill-js-client.AddressHouseNumberExtractResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property housenumberAddition (base name: "housenumber_addition")', function() {
       // uncomment below and update the code to test the property housenumberAddition
-      //var instane = new DatamillForApplications.AddressHouseNumberExtractResponse();
+      //var instane = new datamill-js-client.AddressHouseNumberExtractResponse();
       //expect(instance).to.be();
     });
 

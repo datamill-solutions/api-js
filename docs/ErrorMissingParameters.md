@@ -1,4 +1,4 @@
-# DatamillForApplications.ErrorMissingParameters
+# datamill-js-client.ErrorMissingParameters
 
 ## Properties
 Name | Type | Description | Notes

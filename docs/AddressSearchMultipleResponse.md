@@ -1,4 +1,4 @@
-# DatamillForApplications.AddressSearchMultipleResponse
+# datamill-js-client.AddressSearchMultipleResponse
 
 ## Properties
 Name | Type | Description | Notes

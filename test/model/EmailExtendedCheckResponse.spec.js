@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.EmailExtendedCheckResponse();
+    instance = new datamill-js-client.EmailExtendedCheckResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,25 +61,25 @@
   describe('EmailExtendedCheckResponse', function() {
     it('should create an instance of EmailExtendedCheckResponse', function() {
       // uncomment below and update the code to test EmailExtendedCheckResponse
-      //var instane = new DatamillForApplications.EmailExtendedCheckResponse();
-      //expect(instance).to.be.a(DatamillForApplications.EmailExtendedCheckResponse);
+      //var instane = new datamill-js-client.EmailExtendedCheckResponse();
+      //expect(instance).to.be.a(datamill-js-client.EmailExtendedCheckResponse);
     });
 
     it('should have the property valid (base name: "valid")', function() {
       // uncomment below and update the code to test the property valid
-      //var instane = new DatamillForApplications.EmailExtendedCheckResponse();
+      //var instane = new datamill-js-client.EmailExtendedCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property description (base name: "description")', function() {
       // uncomment below and update the code to test the property description
-      //var instane = new DatamillForApplications.EmailExtendedCheckResponse();
+      //var instane = new datamill-js-client.EmailExtendedCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property statusCode (base name: "status_code")', function() {
       // uncomment below and update the code to test the property statusCode
-      //var instane = new DatamillForApplications.EmailExtendedCheckResponse();
+      //var instane = new datamill-js-client.EmailExtendedCheckResponse();
       //expect(instance).to.be();
     });
 

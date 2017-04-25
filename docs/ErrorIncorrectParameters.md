@@ -1,4 +1,4 @@
-# DatamillForApplications.ErrorIncorrectParameters
+# datamill-js-client.ErrorIncorrectParameters
 
 ## Properties
 Name | Type | Description | Notes

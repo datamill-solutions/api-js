@@ -1,4 +1,4 @@
-# DatamillForApplications.UrlCheckResponse
+# datamill-js-client.UrlCheckResponse
 
 ## Properties
 Name | Type | Description | Notes

@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.ErrorUnauthorized();
+    instance = new datamill-js-client.ErrorUnauthorized();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('ErrorUnauthorized', function() {
     it('should create an instance of ErrorUnauthorized', function() {
       // uncomment below and update the code to test ErrorUnauthorized
-      //var instane = new DatamillForApplications.ErrorUnauthorized();
-      //expect(instance).to.be.a(DatamillForApplications.ErrorUnauthorized);
+      //var instane = new datamill-js-client.ErrorUnauthorized();
+      //expect(instance).to.be.a(datamill-js-client.ErrorUnauthorized);
     });
 
     it('should have the property errorcode (base name: "errorcode")', function() {
       // uncomment below and update the code to test the property errorcode
-      //var instane = new DatamillForApplications.ErrorUnauthorized();
+      //var instane = new datamill-js-client.ErrorUnauthorized();
       //expect(instance).to.be();
     });
 
     it('should have the property errormessage (base name: "errormessage")', function() {
       // uncomment below and update the code to test the property errormessage
-      //var instane = new DatamillForApplications.ErrorUnauthorized();
+      //var instane = new datamill-js-client.ErrorUnauthorized();
       //expect(instance).to.be();
     });
 

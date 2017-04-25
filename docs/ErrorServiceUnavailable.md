@@ -1,4 +1,4 @@
-# DatamillForApplications.ErrorServiceUnavailable
+# datamill-js-client.ErrorServiceUnavailable
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# DatamillForApplications.EmailDomainCheckResponse
+# datamill-js-client.EmailDomainCheckResponse
 
 ## Properties
 Name | Type | Description | Notes

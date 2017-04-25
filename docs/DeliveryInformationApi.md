@@ -1,4 +1,4 @@
-# DatamillForApplications.DeliveryInformationApi
+# datamill-js-client.DeliveryInformationApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -17,9 +17,9 @@ Checks if the postal address of a person identified by its full name is invalid 
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.DeliveryInformationApi();
+var apiInstance = new datamill-js-client.DeliveryInformationApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 

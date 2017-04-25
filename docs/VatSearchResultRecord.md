@@ -1,4 +1,4 @@
-# DatamillForApplications.VatSearchResultRecord
+# datamill-js-client.VatSearchResultRecord
 
 ## Properties
 Name | Type | Description | Notes

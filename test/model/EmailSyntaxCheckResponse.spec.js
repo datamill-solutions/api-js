@@ -31,15 +31,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.DatamillForApplications);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(expect, DatamillForApplications) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new DatamillForApplications.EmailSyntaxCheckResponse();
+    instance = new datamill-js-client.EmailSyntaxCheckResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -61,19 +61,19 @@
   describe('EmailSyntaxCheckResponse', function() {
     it('should create an instance of EmailSyntaxCheckResponse', function() {
       // uncomment below and update the code to test EmailSyntaxCheckResponse
-      //var instane = new DatamillForApplications.EmailSyntaxCheckResponse();
-      //expect(instance).to.be.a(DatamillForApplications.EmailSyntaxCheckResponse);
+      //var instane = new datamill-js-client.EmailSyntaxCheckResponse();
+      //expect(instance).to.be.a(datamill-js-client.EmailSyntaxCheckResponse);
     });
 
     it('should have the property valid (base name: "valid")', function() {
       // uncomment below and update the code to test the property valid
-      //var instane = new DatamillForApplications.EmailSyntaxCheckResponse();
+      //var instane = new datamill-js-client.EmailSyntaxCheckResponse();
       //expect(instance).to.be();
     });
 
     it('should have the property statusCode (base name: "status_code")', function() {
       // uncomment below and update the code to test the property statusCode
-      //var instane = new DatamillForApplications.EmailSyntaxCheckResponse();
+      //var instane = new datamill-js-client.EmailSyntaxCheckResponse();
       //expect(instance).to.be();
     });
 

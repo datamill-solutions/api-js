@@ -1,4 +1,4 @@
-# DatamillForApplications.BICApi
+# datamill-js-client.BICApi
 
 All URIs are relative to *https://api.methis.at*
 
@@ -17,9 +17,9 @@ Checks the spelling of a given BIC (Business Identifier Code), also known as SWI
 
 ### Example
 ```javascript
-var DatamillForApplications = require('datamill_for_applications');
+var datamill-js-client = require('datamill-js-client');
 
-var apiInstance = new DatamillForApplications.BICApi();
+var apiInstance = new datamill-js-client.BICApi();
 
 var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
