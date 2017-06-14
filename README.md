@@ -53,11 +53,14 @@ Please follow the [installation](#installation) instruction and execute the foll
 ```javascript
 var datamill-js-client = require('datamill-js-client');
 
+var defaultClient = datamill-js-client.ApiClient.instance;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME'
+APISecurity.password = 'YOUR PASSWORD'
+
 var api = new datamill-js-client.AddressApi()
-
-var license = "license_example"; // {String} The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // {String} The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var opts = { 
   'street': "street_example", // {String} Free-form text containing the street name and optional the house number including additional house number information. The key is required if housenumber is empty or unset.
@@ -71,13 +74,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.extractHouseNumber(license, guid, , opts, callback);
+api.extractHouseNumber(opts, callback);
 
 ```
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api.methis.at*
+All URIs are relative to *https://api-beta.methis.at*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -90,9 +93,39 @@ Class | Method | HTTP request | Description
 *datamill-js-client.ConvertApi* | [**convertLowerCase**](docs/ConvertApi.md#convertLowerCase) | **POST** /convert/lowercase | Convert any string to lower case
 *datamill-js-client.ConvertApi* | [**convertUpperCase**](docs/ConvertApi.md#convertUpperCase) | **POST** /convert/uppercase | Convert any string to upper case
 *datamill-js-client.ConvertApi* | [**convertWrap**](docs/ConvertApi.md#convertWrap) | **POST** /convert/wrap | Wrap text
+*datamill-js-client.ConvertApi* | [**getPhoneticCode**](docs/ConvertApi.md#getPhoneticCode) | **POST** /phonetic/code/get | Calculate phonetic codes of a given text
 *datamill-js-client.DUNSApi* | [**getDUNSRating**](docs/DUNSApi.md#getDUNSRating) | **POST** /business-data/duns/rating | Get marketing information by DUNS number
 *datamill-js-client.DUNSApi* | [**resolveDUNS**](docs/DUNSApi.md#resolveDUNS) | **POST** /business-data/duns/resolve | Resolve company information by DUNS number
 *datamill-js-client.DUNSApi* | [**searchDUNS**](docs/DUNSApi.md#searchDUNS) | **POST** /business-data/duns/search | Find DUNS number and company information by name
+*datamill-js-client.DataMillApi* | [**checkBIC**](docs/DataMillApi.md#checkBIC) | **POST** /bic/check | Check BIC for spelling
+*datamill-js-client.DataMillApi* | [**checkEmailDomain**](docs/DataMillApi.md#checkEmailDomain) | **POST** /email/domain/check | Check email syntax and mail server domain
+*datamill-js-client.DataMillApi* | [**checkEmailMailbox**](docs/DataMillApi.md#checkEmailMailbox) | **POST** /email/extended/check | Check email syntax, mail server domain and mailbox itself
+*datamill-js-client.DataMillApi* | [**checkEmailSyntax**](docs/DataMillApi.md#checkEmailSyntax) | **POST** /email/syntax/check | Check email syntax
+*datamill-js-client.DataMillApi* | [**checkIBAN**](docs/DataMillApi.md#checkIBAN) | **POST** /iban/check | Check IBAN for spelling
+*datamill-js-client.DataMillApi* | [**checkMobilePhone**](docs/DataMillApi.md#checkMobilePhone) | **POST** /phone/mobile/check | Verify mobile phone number
+*datamill-js-client.DataMillApi* | [**checkUrl**](docs/DataMillApi.md#checkUrl) | **POST** /url/check | Information about web resources
+*datamill-js-client.DataMillApi* | [**checkVAT**](docs/DataMillApi.md#checkVAT) | **POST** /vat/check | Check vat number for correctness
+*datamill-js-client.DataMillApi* | [**convertCapitalFirst**](docs/DataMillApi.md#convertCapitalFirst) | **POST** /convert/capitalfirst | Convert any string to capitalize words
+*datamill-js-client.DataMillApi* | [**convertLowerCase**](docs/DataMillApi.md#convertLowerCase) | **POST** /convert/lowercase | Convert any string to lower case
+*datamill-js-client.DataMillApi* | [**convertUpperCase**](docs/DataMillApi.md#convertUpperCase) | **POST** /convert/uppercase | Convert any string to upper case
+*datamill-js-client.DataMillApi* | [**convertWrap**](docs/DataMillApi.md#convertWrap) | **POST** /convert/wrap | Wrap text
+*datamill-js-client.DataMillApi* | [**extractHouseNumber**](docs/DataMillApi.md#extractHouseNumber) | **POST** /address/housenumber/extract | Try to extract house number from street information
+*datamill-js-client.DataMillApi* | [**formatPhoneNumber**](docs/DataMillApi.md#formatPhoneNumber) | **POST** /phone/format | Parse, format and validate phone numbers
+*datamill-js-client.DataMillApi* | [**getDUNSRating**](docs/DataMillApi.md#getDUNSRating) | **POST** /business-data/duns/rating | Get marketing information by DUNS number
+*datamill-js-client.DataMillApi* | [**getFirstNames**](docs/DataMillApi.md#getFirstNames) | **POST** /firstname/get | Recognize and extract first names
+*datamill-js-client.DataMillApi* | [**getGender**](docs/DataMillApi.md#getGender) | **POST** /gender/get | Recognize gender by first name
+*datamill-js-client.DataMillApi* | [**getGenderExtended**](docs/DataMillApi.md#getGenderExtended) | **POST** /gender/extended/get | Recognize gender by first name (advanced)
+*datamill-js-client.DataMillApi* | [**getPhoneCountryCode**](docs/DataMillApi.md#getPhoneCountryCode) | **POST** /phone/countrycode/get | International and national dial prefix
+*datamill-js-client.DataMillApi* | [**getPhoneticCode**](docs/DataMillApi.md#getPhoneticCode) | **POST** /phonetic/code/get | Calculate phonetic codes of a given text
+*datamill-js-client.DataMillApi* | [**getSocialMediaActivities**](docs/DataMillApi.md#getSocialMediaActivities) | **POST** /social-media/activities/get | Retrieve social media data by email address
+*datamill-js-client.DataMillApi* | [**locateAddress**](docs/DataMillApi.md#locateAddress) | **POST** /address/locate | Reverse address lookup
+*datamill-js-client.DataMillApi* | [**resolveDUNS**](docs/DataMillApi.md#resolveDUNS) | **POST** /business-data/duns/resolve | Resolve company information by DUNS number
+*datamill-js-client.DataMillApi* | [**resolveVAT**](docs/DataMillApi.md#resolveVAT) | **POST** /vat/resolve | Try to resolve VAT number to company information
+*datamill-js-client.DataMillApi* | [**searchAddress**](docs/DataMillApi.md#searchAddress) | **POST** /address/search | Lookup physical postal address
+*datamill-js-client.DataMillApi* | [**searchAddressMultiple**](docs/DataMillApi.md#searchAddressMultiple) | **POST** /address/search/multiple | Address lookup with multiple possible results
+*datamill-js-client.DataMillApi* | [**searchDUNS**](docs/DataMillApi.md#searchDUNS) | **POST** /business-data/duns/search | Find DUNS number and company information by name
+*datamill-js-client.DataMillApi* | [**searchUndeliverableContact**](docs/DataMillApi.md#searchUndeliverableContact) | **POST** /business-data/undeliverable-contacts/search | Find moved and deceased contacts
+*datamill-js-client.DataMillApi* | [**searchVAT**](docs/DataMillApi.md#searchVAT) | **POST** /vat/search | Find VAT number and company information by name
 *datamill-js-client.DeliveryInformationApi* | [**searchUndeliverableContact**](docs/DeliveryInformationApi.md#searchUndeliverableContact) | **POST** /business-data/undeliverable-contacts/search | Find moved and deceased contacts
 *datamill-js-client.EmailApi* | [**checkEmailDomain**](docs/EmailApi.md#checkEmailDomain) | **POST** /email/domain/check | Check email syntax and mail server domain
 *datamill-js-client.EmailApi* | [**checkEmailMailbox**](docs/EmailApi.md#checkEmailMailbox) | **POST** /email/extended/check | Check email syntax, mail server domain and mailbox itself
@@ -146,6 +179,7 @@ Class | Method | HTTP request | Description
  - [datamill-js-client.PhoneCountryCodeGetResponse](docs/PhoneCountryCodeGetResponse.md)
  - [datamill-js-client.PhoneFormatResponse](docs/PhoneFormatResponse.md)
  - [datamill-js-client.PhoneMobileCheckResponse](docs/PhoneMobileCheckResponse.md)
+ - [datamill-js-client.PhoneticCodeGetResponse](docs/PhoneticCodeGetResponse.md)
  - [datamill-js-client.SocialMediaActivitiesGetEducation](docs/SocialMediaActivitiesGetEducation.md)
  - [datamill-js-client.SocialMediaActivitiesGetEmployment](docs/SocialMediaActivitiesGetEmployment.md)
  - [datamill-js-client.SocialMediaActivitiesGetFacebook](docs/SocialMediaActivitiesGetFacebook.md)
@@ -168,5 +202,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Authorization
 
- All endpoints do not require authorization.
+
+### APISecurity
+
+- **Type**: HTTP basic authentication
 

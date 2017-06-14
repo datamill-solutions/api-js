@@ -1,6 +1,6 @@
 # datamill-js-client.DUNSApi
 
-All URIs are relative to *https://api.methis.at*
+All URIs are relative to *https://api-beta.methis.at*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getDUNSRating"></a>
 # **getDUNSRating**
-> BusinessDataDunsRatingResponse getDUNSRating(license, guid, dunsNumber, reasonCode)
+> BusinessDataDunsRatingResponse getDUNSRating(dunsNumber, reasonCode)
 
 Get marketing information by DUNS number
 
@@ -20,12 +20,14 @@ Get marketing information about a company (credit rating, PAYDEX score, demograp
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.DUNSApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var dunsNumber = "dunsNumber_example"; // String | The D-U-N-S number you are looking for detailed information
 
@@ -39,15 +41,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getDUNSRating(license, guid, dunsNumber, reasonCode, callback);
+apiInstance.getDUNSRating(dunsNumber, reasonCode, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **dunsNumber** | **String**| The D-U-N-S number you are looking for detailed information | 
  **reasonCode** | **String**| Unique code describing the reason why you like to get detailed information about the specified company. Possible codes are:  * **1**: Credit decisions  * **2**: Credit check (intended business connection)  * **3**: Credit check (ongoing business connection)  * **4**: Debt collections  * **5**: Commercial credit insurance  * **6**: Insurance contract  * **7**: Leasing agreement  * **8**: Rental agreement  | 
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 
@@ -66,7 +66,7 @@ No authorization required
 
 <a name="resolveDUNS"></a>
 # **resolveDUNS**
-> BusinessDataDunsResolveResponse resolveDUNS(license, guid, dunsNumber, reasonCode)
+> BusinessDataDunsResolveResponse resolveDUNS(dunsNumber, reasonCode)
 
 Resolve company information by DUNS number
 
@@ -75,12 +75,14 @@ Resolves company information (official name, postal address, annual turnover, nu
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.DUNSApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var dunsNumber = "dunsNumber_example"; // String | The D-U-N-S number you are looking for detailed information
 
@@ -94,15 +96,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.resolveDUNS(license, guid, dunsNumber, reasonCode, callback);
+apiInstance.resolveDUNS(dunsNumber, reasonCode, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **dunsNumber** | **String**| The D-U-N-S number you are looking for detailed information | 
  **reasonCode** | **String**| Unique code describing the reason why you like to get detailed information about the specified company. Possible codes are:  * **1**: Credit decisions  * **2**: Credit check (intended business connection)  * **3**: Credit check (ongoing business connection)  * **4**: Debt collections  * **5**: Commercial credit insurance  * **6**: Insurance contract  * **7**: Leasing agreement  * **8**: Rental agreement  | 
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 
@@ -121,7 +121,7 @@ No authorization required
 
 <a name="searchDUNS"></a>
 # **searchDUNS**
-> BusinessDataDunsSearchResponse searchDUNS(license, guid, countryCode, , opts)
+> BusinessDataDunsSearchResponse searchDUNS(countryCode, , opts)
 
 Find DUNS number and company information by name
 
@@ -130,12 +130,14 @@ Finds the D-U-N-S number and additional company information by the company&#39;s
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.DUNSApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var countryCode = "countryCode_example"; // String | ISO 3166-1 alpha-2 country code e.g. 'US'. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information.
 
@@ -155,15 +157,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.searchDUNS(license, guid, countryCode, , opts, callback);
+apiInstance.searchDUNS(countryCode, , opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **countryCode** | **String**| ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information. | 
  **companyName** | **String**| The company name you are looking for or relevant parts of it (may be empty if the duns_number is set) | [optional] 
  **dunsNumber** | **String**| The D-U-N-S number you are looking for detailed information (may be empty if the company_name and country_code are set) | [optional] 
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 

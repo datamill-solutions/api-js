@@ -39,7 +39,7 @@
   var instance;
 
   beforeEach(function() {
-    instance = new datamill-js-client.ConvertApi();
+    instance = new datamill-js-client.PhoneticCodeGetResponse();
   });
 
   var getProperty = function(object, getter, property) {
@@ -58,57 +58,19 @@
       object[property] = value;
   }
 
-  describe('ConvertApi', function() {
-    describe('convertCapitalFirst', function() {
-      it('should call convertCapitalFirst successfully', function(done) {
-        //uncomment below and update the code to test convertCapitalFirst
-        //instance.convertCapitalFirst(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+  describe('PhoneticCodeGetResponse', function() {
+    it('should create an instance of PhoneticCodeGetResponse', function() {
+      // uncomment below and update the code to test PhoneticCodeGetResponse
+      //var instane = new datamill-js-client.PhoneticCodeGetResponse();
+      //expect(instance).to.be.a(datamill-js-client.PhoneticCodeGetResponse);
     });
-    describe('convertLowerCase', function() {
-      it('should call convertLowerCase successfully', function(done) {
-        //uncomment below and update the code to test convertLowerCase
-        //instance.convertLowerCase(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
+
+    it('should have the property phoneticCodes (base name: "phonetic_codes")', function() {
+      // uncomment below and update the code to test the property phoneticCodes
+      //var instane = new datamill-js-client.PhoneticCodeGetResponse();
+      //expect(instance).to.be();
     });
-    describe('convertUpperCase', function() {
-      it('should call convertUpperCase successfully', function(done) {
-        //uncomment below and update the code to test convertUpperCase
-        //instance.convertUpperCase(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('convertWrap', function() {
-      it('should call convertWrap successfully', function(done) {
-        //uncomment below and update the code to test convertWrap
-        //instance.convertWrap(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('getPhoneticCode', function() {
-      it('should call getPhoneticCode successfully', function(done) {
-        //uncomment below and update the code to test getPhoneticCode
-        //instance.getPhoneticCode(pet, function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
+
   });
 
 }));

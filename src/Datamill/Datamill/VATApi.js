@@ -67,24 +67,12 @@
     /**
      * Check vat number for correctness
      * Checks if a given VAT (Value Added Tax) identification number is valid or not. Only VAT numbers of companies within the European Union can be verified. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} vatnumber The VAT number of a company within the European Union
      * @param {module:Datamill/Datamill/VATApi~checkVATCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/VatCheckResponse}
      */
-    this.checkVAT = function(license, guid, vatnumber, callback) {
+    this.checkVAT = function(vatnumber, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling checkVAT");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling checkVAT");
-      }
 
       // verify the required parameter 'vatnumber' is set
       if (vatnumber == undefined || vatnumber == null) {
@@ -99,12 +87,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'vatnumber': vatnumber
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = VatCheckResponse;
@@ -127,27 +113,15 @@
     /**
      * Try to resolve VAT number to company information
      * Resolves company information (company name and postal address) based on the company&#39;s VAT (Value Added Tax) identification number. Only VAT numbers of companies within the European Union can be verified and resolved. Some countries have access restrictions and may not deliver the full company information. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} vatnumber The VAT number of a company within the European Union
      * @param {Object} opts Optional parameters
      * @param {String} opts.locale The preferred language of address elements in the result. The locale must be provided according to RFC 4647 standard (language code).
      * @param {module:Datamill/Datamill/VATApi~resolveVATCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/VatResolveResponse}
      */
-    this.resolveVAT = function(license, guid, vatnumber, opts, callback) {
+    this.resolveVAT = function(vatnumber, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling resolveVAT");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling resolveVAT");
-      }
 
       // verify the required parameter 'vatnumber' is set
       if (vatnumber == undefined || vatnumber == null) {
@@ -162,13 +136,11 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'vatnumber': vatnumber,
         'locale': opts['locale']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = VatResolveResponse;
@@ -191,8 +163,6 @@
     /**
      * Find VAT number and company information by name
      * Finds the VAT number and additional company information by the company&#39;s name and headquarters location. The function returns multiple results if similar companies are found in the same city. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} company The name of an company. You may enter the fully qualified name or only partial information.
      * @param {Object} opts Optional parameters
      * @param {String} opts.city The city where the company&#39;s headquarters is located.
@@ -202,19 +172,9 @@
      * @param {module:Datamill/Datamill/VATApi~searchVATCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/VatSearchResponse}
      */
-    this.searchVAT = function(license, guid, company, opts, callback) {
+    this.searchVAT = function(company, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling searchVAT");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling searchVAT");
-      }
 
       // verify the required parameter 'company' is set
       if (company == undefined || company == null) {
@@ -229,8 +189,6 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'company': company,
         'city': opts['city'],
         'country_code': opts['countryCode'],
@@ -238,7 +196,7 @@
         'min_score': opts['minScore']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = VatSearchResponse;

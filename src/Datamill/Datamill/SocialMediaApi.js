@@ -67,24 +67,12 @@
     /**
      * Retrieve social media data by email address
      * Get the number of followers and account information of multiple social media platforms from individual email addresses. If the social media information for a specific email address aren&#39;t fetched yet the request will be queued and the data will be available within the next 12 hours. Please consider that the response of a social media platform may be empty because of restricted access (privacy setting of the person being checked). The following social media platforms are currently checked:  * **LinkedIn**  * **XING**  * **Facebook**  * **Twitter**  * **Pinterest**  * **Instagram**  * **Youtube**  * **Google Plus**  * **Klout** 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} email The person&#39;s email address being checked on mentioned social media plattforms
      * @param {module:Datamill/Datamill/SocialMediaApi~getSocialMediaActivitiesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/SocialMediaActivitiesGetResponse}
      */
-    this.getSocialMediaActivities = function(license, guid, email, callback) {
+    this.getSocialMediaActivities = function(email, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling getSocialMediaActivities");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling getSocialMediaActivities");
-      }
 
       // verify the required parameter 'email' is set
       if (email == undefined || email == null) {
@@ -99,12 +87,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'email': email
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = SocialMediaActivitiesGetResponse;

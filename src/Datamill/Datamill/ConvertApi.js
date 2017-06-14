@@ -25,18 +25,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Datamill/ApiClient', 'Datamill/Datamill/ConvertCapitalFirstResponse', 'Datamill/Datamill/ConvertLowerCaseResponse', 'Datamill/Datamill/ConvertUpperCaseResponse', 'Datamill/Datamill/ConvertWrapResponse', 'Datamill/Datamill/ErrorForbidden', 'Datamill/Datamill/ErrorIncorrectParameters', 'Datamill/Datamill/ErrorInternalError', 'Datamill/Datamill/ErrorMissingParameters', 'Datamill/Datamill/ErrorNotAllowed', 'Datamill/Datamill/ErrorNotFound', 'Datamill/Datamill/ErrorQuotaExceeded', 'Datamill/Datamill/ErrorServiceUnavailable', 'Datamill/Datamill/ErrorUnauthorized'], factory);
+    define(['Datamill/ApiClient', 'Datamill/Datamill/ConvertCapitalFirstResponse', 'Datamill/Datamill/ConvertLowerCaseResponse', 'Datamill/Datamill/ConvertUpperCaseResponse', 'Datamill/Datamill/ConvertWrapResponse', 'Datamill/Datamill/ErrorForbidden', 'Datamill/Datamill/ErrorIncorrectParameters', 'Datamill/Datamill/ErrorInternalError', 'Datamill/Datamill/ErrorMissingParameters', 'Datamill/Datamill/ErrorNotAllowed', 'Datamill/Datamill/ErrorNotFound', 'Datamill/Datamill/ErrorQuotaExceeded', 'Datamill/Datamill/ErrorServiceUnavailable', 'Datamill/Datamill/ErrorUnauthorized', 'Datamill/Datamill/PhoneticCodeGetResponse'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('../Datamill/ConvertCapitalFirstResponse'), require('../Datamill/ConvertLowerCaseResponse'), require('../Datamill/ConvertUpperCaseResponse'), require('../Datamill/ConvertWrapResponse'), require('../Datamill/ErrorForbidden'), require('../Datamill/ErrorIncorrectParameters'), require('../Datamill/ErrorInternalError'), require('../Datamill/ErrorMissingParameters'), require('../Datamill/ErrorNotAllowed'), require('../Datamill/ErrorNotFound'), require('../Datamill/ErrorQuotaExceeded'), require('../Datamill/ErrorServiceUnavailable'), require('../Datamill/ErrorUnauthorized'));
+    module.exports = factory(require('../ApiClient'), require('../Datamill/ConvertCapitalFirstResponse'), require('../Datamill/ConvertLowerCaseResponse'), require('../Datamill/ConvertUpperCaseResponse'), require('../Datamill/ConvertWrapResponse'), require('../Datamill/ErrorForbidden'), require('../Datamill/ErrorIncorrectParameters'), require('../Datamill/ErrorInternalError'), require('../Datamill/ErrorMissingParameters'), require('../Datamill/ErrorNotAllowed'), require('../Datamill/ErrorNotFound'), require('../Datamill/ErrorQuotaExceeded'), require('../Datamill/ErrorServiceUnavailable'), require('../Datamill/ErrorUnauthorized'), require('../Datamill/PhoneticCodeGetResponse'));
   } else {
     // Browser globals (root is window)
     if (!root.datamill-js-client) {
       root.datamill-js-client = {};
     }
-    root.datamill-js-client.ConvertApi = factory(root.datamill-js-client.ApiClient, root.datamill-js-client.ConvertCapitalFirstResponse, root.datamill-js-client.ConvertLowerCaseResponse, root.datamill-js-client.ConvertUpperCaseResponse, root.datamill-js-client.ConvertWrapResponse, root.datamill-js-client.ErrorForbidden, root.datamill-js-client.ErrorIncorrectParameters, root.datamill-js-client.ErrorInternalError, root.datamill-js-client.ErrorMissingParameters, root.datamill-js-client.ErrorNotAllowed, root.datamill-js-client.ErrorNotFound, root.datamill-js-client.ErrorQuotaExceeded, root.datamill-js-client.ErrorServiceUnavailable, root.datamill-js-client.ErrorUnauthorized);
+    root.datamill-js-client.ConvertApi = factory(root.datamill-js-client.ApiClient, root.datamill-js-client.ConvertCapitalFirstResponse, root.datamill-js-client.ConvertLowerCaseResponse, root.datamill-js-client.ConvertUpperCaseResponse, root.datamill-js-client.ConvertWrapResponse, root.datamill-js-client.ErrorForbidden, root.datamill-js-client.ErrorIncorrectParameters, root.datamill-js-client.ErrorInternalError, root.datamill-js-client.ErrorMissingParameters, root.datamill-js-client.ErrorNotAllowed, root.datamill-js-client.ErrorNotFound, root.datamill-js-client.ErrorQuotaExceeded, root.datamill-js-client.ErrorServiceUnavailable, root.datamill-js-client.ErrorUnauthorized, root.datamill-js-client.PhoneticCodeGetResponse);
   }
-}(this, function(ApiClient, ConvertCapitalFirstResponse, ConvertLowerCaseResponse, ConvertUpperCaseResponse, ConvertWrapResponse, ErrorForbidden, ErrorIncorrectParameters, ErrorInternalError, ErrorMissingParameters, ErrorNotAllowed, ErrorNotFound, ErrorQuotaExceeded, ErrorServiceUnavailable, ErrorUnauthorized) {
+}(this, function(ApiClient, ConvertCapitalFirstResponse, ConvertLowerCaseResponse, ConvertUpperCaseResponse, ConvertWrapResponse, ErrorForbidden, ErrorIncorrectParameters, ErrorInternalError, ErrorMissingParameters, ErrorNotAllowed, ErrorNotFound, ErrorQuotaExceeded, ErrorServiceUnavailable, ErrorUnauthorized, PhoneticCodeGetResponse) {
   'use strict';
 
   /**
@@ -67,24 +67,12 @@
     /**
      * Convert any string to capitalize words
      * Changes any word of a given text so that the first letter is capitalized and all the others turned into lower case. Special proper names, like \&quot;DiCaprio\&quot; are detected and ignored. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} text Free-form text to be converted.
      * @param {module:Datamill/Datamill/ConvertApi~convertCapitalFirstCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/ConvertCapitalFirstResponse}
      */
-    this.convertCapitalFirst = function(license, guid, text, callback) {
+    this.convertCapitalFirst = function(text, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling convertCapitalFirst");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling convertCapitalFirst");
-      }
 
       // verify the required parameter 'text' is set
       if (text == undefined || text == null) {
@@ -99,12 +87,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'text': text
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = ConvertCapitalFirstResponse;
@@ -127,24 +113,12 @@
     /**
      * Convert any string to lower case
      * Converts all letters of any word in a given string in the respective lowercase. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} text Free-form text to be converted.
      * @param {module:Datamill/Datamill/ConvertApi~convertLowerCaseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/ConvertLowerCaseResponse}
      */
-    this.convertLowerCase = function(license, guid, text, callback) {
+    this.convertLowerCase = function(text, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling convertLowerCase");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling convertLowerCase");
-      }
 
       // verify the required parameter 'text' is set
       if (text == undefined || text == null) {
@@ -159,12 +133,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'text': text
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = ConvertLowerCaseResponse;
@@ -187,24 +159,12 @@
     /**
      * Convert any string to upper case
      * Converts all letters of any word in a given string in the respective capital. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} text Free-form text to be converted.
      * @param {module:Datamill/Datamill/ConvertApi~convertUpperCaseCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/ConvertUpperCaseResponse}
      */
-    this.convertUpperCase = function(license, guid, text, callback) {
+    this.convertUpperCase = function(text, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling convertUpperCase");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling convertUpperCase");
-      }
 
       // verify the required parameter 'text' is set
       if (text == undefined || text == null) {
@@ -219,12 +179,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'text': text
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = ConvertUpperCaseResponse;
@@ -247,8 +205,6 @@
     /**
      * Wrap text
      * Breaks a text into multiple newlines. Each line will be separated by a \\r (CR, ASCII 13) and \\n (LF, ASCII 10) character. The number of characters a line break will be inserted after can be justified. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} text Fre-form text to be wrapped.
      * @param {Number} limit The number of characters a linefeed will be inserted after (maximum character length per line).
      * @param {Object} opts Optional parameters
@@ -257,19 +213,9 @@
      * @param {module:Datamill/Datamill/ConvertApi~convertWrapCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/ConvertWrapResponse}
      */
-    this.convertWrap = function(license, guid, text, limit, opts, callback) {
+    this.convertWrap = function(text, limit, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling convertWrap");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling convertWrap");
-      }
 
       // verify the required parameter 'text' is set
       if (text == undefined || text == null) {
@@ -289,21 +235,69 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'text': text,
         'limit': limit,
         'mode': opts['mode'],
         'linebreak': opts['linebreak']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = ConvertWrapResponse;
 
       return this.apiClient.callApi(
         '/convert/wrap', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the getPhoneticCode operation.
+     * @callback module:Datamill/Datamill/ConvertApi~getPhoneticCodeCallback
+     * @param {String} error Error message, if any.
+     * @param {module:Datamill/Datamill/PhoneticCodeGetResponse} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Calculate phonetic codes of a given text
+     * Get the phonetic code of a given text. Currently three phonetic algorithms are available:  * **Soundex** (algorithm code 1)  * **Colcogne Phonetic** (algorithm code 2)  * **Metaphon** (algorithm code 3) 
+     * @param {String} text The text which should be converted. Each word will be converted separatly and generate a single entry in the result. 
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.phoneticAlgorithm The phonetic algorithm which should be applied. If no algorithm code will be provided **Soundex** will be used. Codes:  * 1 &#x3D; Soundex  * 2 &#x3D; Colcogne Phonetic  * 3 &#x3D; Metaphon 
+     * @param {module:Datamill/Datamill/ConvertApi~getPhoneticCodeCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link module:Datamill/Datamill/PhoneticCodeGetResponse}
+     */
+    this.getPhoneticCode = function(text, opts, callback) {
+      opts = opts || {};
+      var postBody = null;
+
+      // verify the required parameter 'text' is set
+      if (text == undefined || text == null) {
+        throw new Error("Missing the required parameter 'text' when calling getPhoneticCode");
+      }
+
+
+      var pathParams = {
+      };
+      var queryParams = {
+      };
+      var headerParams = {
+      };
+      var formParams = {
+        'text': text,
+        'phonetic_algorithm': opts['phoneticAlgorithm']
+      };
+
+      var authNames = ['APISecurity'];
+      var contentTypes = ['multipart/form-data'];
+      var accepts = ['application/json'];
+      var returnType = PhoneticCodeGetResponse;
+
+      return this.apiClient.callApi(
+        '/phonetic/code/get', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

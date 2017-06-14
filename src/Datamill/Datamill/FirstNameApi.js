@@ -67,24 +67,12 @@
     /**
      * Recognize and extract first names
      * Detects all first names in a given sting (e.g. a person&#39;s name) and extracts them. (Works only with common first names in Germany, Austria and Switzerland) 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} name Full name to detect all first names and extract them
      * @param {module:Datamill/Datamill/FirstNameApi~getFirstNamesCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/FirstNameGetResponse}
      */
-    this.getFirstNames = function(license, guid, name, callback) {
+    this.getFirstNames = function(name, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling getFirstNames");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling getFirstNames");
-      }
 
       // verify the required parameter 'name' is set
       if (name == undefined || name == null) {
@@ -99,12 +87,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'name': name
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = FirstNameGetResponse;

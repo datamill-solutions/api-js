@@ -1,6 +1,6 @@
 # datamill-js-client.PhoneNumberApi
 
-All URIs are relative to *https://api.methis.at*
+All URIs are relative to *https://api-beta.methis.at*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="checkMobilePhone"></a>
 # **checkMobilePhone**
-> PhoneMobileCheckResponse checkMobilePhone(license, guid, phonenumber, countrycode)
+> PhoneMobileCheckResponse checkMobilePhone(phonenumber, countrycode)
 
 Verify mobile phone number
 
@@ -20,12 +20,14 @@ Real time validation of mobile numbers without triggering a call of send a text 
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.PhoneNumberApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var phonenumber = "phonenumber_example"; // String | Mobile phone number to be verified.
 
@@ -39,15 +41,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkMobilePhone(license, guid, phonenumber, countrycode, callback);
+apiInstance.checkMobilePhone(phonenumber, countrycode, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **phonenumber** | **String**| Mobile phone number to be verified. | 
  **countrycode** | **String**| ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information. | 
 
@@ -57,7 +57,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 
@@ -66,7 +66,7 @@ No authorization required
 
 <a name="formatPhoneNumber"></a>
 # **formatPhoneNumber**
-> PhoneFormatResponse formatPhoneNumber(license, guid, phonenumber, countrycode, opts)
+> PhoneFormatResponse formatPhoneNumber(phonenumber, countrycode, opts)
 
 Parse, format and validate phone numbers
 
@@ -75,12 +75,14 @@ Validates a given phone number and converts it to the canonical form. In additio
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.PhoneNumberApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var phonenumber = "phonenumber_example"; // String | Phone number to be formatted and validated
 
@@ -99,15 +101,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.formatPhoneNumber(license, guid, phonenumber, countrycode, opts, callback);
+apiInstance.formatPhoneNumber(phonenumber, countrycode, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **phonenumber** | **String**| Phone number to be formatted and validated | 
  **countrycode** | **String**| ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information. | 
  **format** | **String**| The custom format of the returning phone number if valid. The format is a combination of the following placeholders:  * **{countrycode}**: The international dial prefix for the country without leading zero or the \\\&quot;+\\\&quot; sign  * **{nationalcode}**: The regional dial prefix  * **{phonenumber}**: The phone number including the extension and without the international and regional prefix  * **{national_prefix}**: The national dial prefix including the leading zero  * **{international_prefix}**: The international dial prefix including leading zeros.  If no custom format is specified the following combination is used: **+{countrycode} {nationalcode} {phonenumber}** (canonical format)  | [optional] 
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 
@@ -129,7 +129,7 @@ No authorization required
 
 <a name="getPhoneCountryCode"></a>
 # **getPhoneCountryCode**
-> PhoneCountryCodeGetResponse getPhoneCountryCode(license, guid, countrycode)
+> PhoneCountryCodeGetResponse getPhoneCountryCode(countrycode)
 
 International and national dial prefix
 
@@ -138,12 +138,14 @@ Resolves the national and international dial prefix for a country specified by t
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.PhoneNumberApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var countrycode = "countrycode_example"; // String | ISO 3166-1 alpha-2 country code e.g. 'US'. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information.
 
@@ -155,15 +157,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.getPhoneCountryCode(license, guid, countrycode, callback);
+apiInstance.getPhoneCountryCode(countrycode, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **countrycode** | **String**| ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information. | 
 
 ### Return type
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 

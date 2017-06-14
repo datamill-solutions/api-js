@@ -55,15 +55,16 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://api.methis.at
+     * @default https://api-beta.methis.at
      */
-    this.basePath = 'https://api.methis.at'.replace(/\/+$/, '');
+    this.basePath = 'https://api-beta.methis.at'.replace(/\/+$/, '');
 
     /**
      * The authentication methods to be included for all API calls.
      * @type {Array.<String>}
      */
     this.authentications = {
+      'APISecurity': {type: 'basic'}
     };
     /**
      * The default HTTP headers to be included for all API calls.

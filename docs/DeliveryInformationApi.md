@@ -1,6 +1,6 @@
 # datamill-js-client.DeliveryInformationApi
 
-All URIs are relative to *https://api.methis.at*
+All URIs are relative to *https://api-beta.methis.at*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="searchUndeliverableContact"></a>
 # **searchUndeliverableContact**
-> BusinessDataUndeliverableContactsResponse searchUndeliverableContact(license, guid, firstName, lastName, countryCode, zip, street, reason)
+> BusinessDataUndeliverableContactsResponse searchUndeliverableContact(firstName, lastName, countryCode, zip, street, reason)
 
 Find moved and deceased contacts
 
@@ -18,12 +18,14 @@ Checks if the postal address of a person identified by its full name is invalid 
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.DeliveryInformationApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var firstName = "firstName_example"; // String | The person's first name
 
@@ -45,15 +47,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.searchUndeliverableContact(license, guid, firstName, lastName, countryCode, zip, street, reason, callback);
+apiInstance.searchUndeliverableContact(firstName, lastName, countryCode, zip, street, reason, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **firstName** | **String**| The person&#39;s first name | 
  **lastName** | **String**| The person&#39;s last name | 
  **countryCode** | **String**| ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information. | 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 

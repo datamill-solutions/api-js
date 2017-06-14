@@ -66,28 +66,16 @@
 
     /**
      * Try to extract house number from street information
-     * Find and extract the house number based on partial address information. The result is an extracted street name, house number and additional house number information (e.g. Apartment, Floor, Room). 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
+     * Find and extract the house number based on partial address information. The result is an extracted street name, house number and additional house number information (e.g. Apartment, Floor, Room). It is necessary to provide street and housenumber, either in street field or separated in street and house number field. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.street Free-form text containing the street name and optional the house number including additional house number information. The key is required if housenumber is empty or unset.
      * @param {String} opts.housenumber Free-form text containing the house number including additional house number information and optional the street name. The key is required if street is empty or unset.
      * @param {module:Datamill/Datamill/AddressApi~extractHouseNumberCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/AddressHouseNumberExtractResponse}
      */
-    this.extractHouseNumber = function(license, guid, opts, callback) {
+    this.extractHouseNumber = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling extractHouseNumber");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling extractHouseNumber");
-      }
 
 
       var pathParams = {
@@ -97,13 +85,11 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'street': opts['street'],
         'housenumber': opts['housenumber']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = AddressHouseNumberExtractResponse;
@@ -126,8 +112,6 @@
     /**
      * Reverse address lookup
      * Resolve an address corresponding to a given geo-coordinate. The result is a single record which matches the given latitude and longitude. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} latitude Latitude of the address (use a dot as decimal point)
      * @param {String} longitude Longitude of the address (use a dot as decimal point)
      * @param {Object} opts Optional parameters
@@ -135,19 +119,9 @@
      * @param {module:Datamill/Datamill/AddressApi~locateAddressCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/AddressSearchResponse}
      */
-    this.locateAddress = function(license, guid, latitude, longitude, opts, callback) {
+    this.locateAddress = function(latitude, longitude, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling locateAddress");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling locateAddress");
-      }
 
       // verify the required parameter 'latitude' is set
       if (latitude == undefined || latitude == null) {
@@ -167,14 +141,12 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'latitude': latitude,
         'longitude': longitude,
         'locale': opts['locale']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = AddressSearchResponse;
@@ -197,8 +169,6 @@
     /**
      * Lookup physical postal address
      * Find geo-location based on unstructured (single-line entry, un-qualified) or based on structured (qualified) address information. The result is a single record which matches the given geo-location. The response depends on the data quality of the request. If the request contains too many typos the response keys may be empty.  The unstructured query determines each address part by its own and afterwards finds the closest geo-location. It should only be used if you do not know which address information fits in which query parameter. The structured query provides an additional logic for specific countries to improve the result of the determined geo-location. Please consider that if you do not provide a country name/code the result may end in a different country because the same city + street combination may exist in multiple countries. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {Object} opts Optional parameters
      * @param {String} opts.address Unstructured query parameter. Free-form text containing address elements (e.g. city, postal code, street, house number). Each element is separated using a whitespace. The order of the elements does not matter. You can specify the &#39;address&#39; parameter by itself or you can specify it with other parameters to narrow your search. 
      * @param {String} opts.country Specify the country using the country code (ISO 3166-1 alpha-3) or the country name.
@@ -213,19 +183,9 @@
      * @param {module:Datamill/Datamill/AddressApi~searchAddressCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/AddressSearchResponse}
      */
-    this.searchAddress = function(license, guid, opts, callback) {
+    this.searchAddress = function(opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling searchAddress");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling searchAddress");
-      }
 
 
       var pathParams = {
@@ -235,8 +195,6 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'address': opts['address'],
         'country': opts['country'],
         'state': opts['state'],
@@ -249,7 +207,7 @@
         'locale': opts['locale']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = AddressSearchResponse;
@@ -272,27 +230,15 @@
     /**
      * Address lookup with multiple possible results
      * Find multiple geo-locations based on unstructured (single-line entry, un-qualified) address information. The result is a set of records which matches the given geo-location. The response depends on the data quality of the request. If the request contains too many typo errors the response keys may be empty. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} address Free-form text containing address elements (e.g. city, postal code, street, house number). Each element is separated using a whitespace. The order of the elements does not matter.
      * @param {Object} opts Optional parameters
      * @param {String} opts.locale The preferred language of address elements in the result. The locale must be provided according to RFC 4647 standard (language code).
      * @param {module:Datamill/Datamill/AddressApi~searchAddressMultipleCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/AddressSearchMultipleResponse}
      */
-    this.searchAddressMultiple = function(license, guid, address, opts, callback) {
+    this.searchAddressMultiple = function(address, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling searchAddressMultiple");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling searchAddressMultiple");
-      }
 
       // verify the required parameter 'address' is set
       if (address == undefined || address == null) {
@@ -307,13 +253,11 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'address': address,
         'locale': opts['locale']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = AddressSearchMultipleResponse;

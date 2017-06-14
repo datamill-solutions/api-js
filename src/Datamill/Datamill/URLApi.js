@@ -67,27 +67,15 @@
     /**
      * Information about web resources
      * Fetches the resource of a given url and checks if it is available. Only websites using HTTP/HTTPS are allowed. IP addresses and ports other than 80/443 are not permitted and will be ignored. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} url The url to be checked (e.g. any website)
      * @param {Object} opts Optional parameters
      * @param {String} opts.maxRedirects The maximum amount of redirects until the lookup for the root resource will be stopped (default **10**) (default to 10)
      * @param {module:Datamill/Datamill/URLApi~checkUrlCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/UrlCheckResponse}
      */
-    this.checkUrl = function(license, guid, url, opts, callback) {
+    this.checkUrl = function(url, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling checkUrl");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling checkUrl");
-      }
 
       // verify the required parameter 'url' is set
       if (url == undefined || url == null) {
@@ -102,13 +90,11 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'url': url,
         'max_redirects': opts['maxRedirects']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = UrlCheckResponse;

@@ -67,24 +67,12 @@
     /**
      * Check IBAN for spelling
      * Checks the spelling, country code and checksum of an IBAN (International Bank Account Number). The IBAN is an internationally agreed system of identifying bank accounts across national borders. The function does not verify if the IBAN really exists, instead the format is checked for validity only. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} iban IBAN to be checked.
      * @param {module:Datamill/Datamill/IBANApi~checkIBANCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/IbanCheckResponse}
      */
-    this.checkIBAN = function(license, guid, iban, callback) {
+    this.checkIBAN = function(iban, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling checkIBAN");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling checkIBAN");
-      }
 
       // verify the required parameter 'iban' is set
       if (iban == undefined || iban == null) {
@@ -99,12 +87,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'iban': iban
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = IbanCheckResponse;

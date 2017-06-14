@@ -67,8 +67,6 @@
     /**
      * Find moved and deceased contacts
      * Checks if the postal address of a person identified by its full name is invalid (moved to a new address or deceased). This function does NOT verify/check if a known postal address is still valid, instead it only checks if the person is moved to another address or is deceased and therefore a mail will result in an undeliverable state. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} firstName The person&#39;s first name
      * @param {String} lastName The person&#39;s last name
      * @param {String} countryCode ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information.
@@ -78,18 +76,8 @@
      * @param {module:Datamill/Datamill/DeliveryInformationApi~searchUndeliverableContactCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/BusinessDataUndeliverableContactsResponse}
      */
-    this.searchUndeliverableContact = function(license, guid, firstName, lastName, countryCode, zip, street, reason, callback) {
+    this.searchUndeliverableContact = function(firstName, lastName, countryCode, zip, street, reason, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling searchUndeliverableContact");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling searchUndeliverableContact");
-      }
 
       // verify the required parameter 'firstName' is set
       if (firstName == undefined || firstName == null) {
@@ -129,8 +117,6 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'first_name': firstName,
         'last_name': lastName,
         'country_code': countryCode,
@@ -139,7 +125,7 @@
         'reason': reason
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = BusinessDataUndeliverableContactsResponse;

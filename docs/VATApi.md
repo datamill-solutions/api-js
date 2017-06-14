@@ -1,6 +1,6 @@
 # datamill-js-client.VATApi
 
-All URIs are relative to *https://api.methis.at*
+All URIs are relative to *https://api-beta.methis.at*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="checkVAT"></a>
 # **checkVAT**
-> VatCheckResponse checkVAT(license, guid, vatnumber)
+> VatCheckResponse checkVAT(vatnumber)
 
 Check vat number for correctness
 
@@ -20,12 +20,14 @@ Checks if a given VAT (Value Added Tax) identification number is valid or not. O
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.VATApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var vatnumber = "vatnumber_example"; // String | The VAT number of a company within the European Union
 
@@ -37,15 +39,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.checkVAT(license, guid, vatnumber, callback);
+apiInstance.checkVAT(vatnumber, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **vatnumber** | **String**| The VAT number of a company within the European Union | 
 
 ### Return type
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 
@@ -63,7 +63,7 @@ No authorization required
 
 <a name="resolveVAT"></a>
 # **resolveVAT**
-> VatResolveResponse resolveVAT(license, guid, vatnumber, opts)
+> VatResolveResponse resolveVAT(vatnumber, opts)
 
 Try to resolve VAT number to company information
 
@@ -72,12 +72,14 @@ Resolves company information (company name and postal address) based on the comp
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.VATApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var vatnumber = "vatnumber_example"; // String | The VAT number of a company within the European Union
 
@@ -92,15 +94,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.resolveVAT(license, guid, vatnumber, opts, callback);
+apiInstance.resolveVAT(vatnumber, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **vatnumber** | **String**| The VAT number of a company within the European Union | 
  **locale** | **String**| The preferred language of address elements in the result. The locale must be provided according to RFC 4647 standard (language code). | [optional] 
 
@@ -110,7 +110,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 
@@ -119,7 +119,7 @@ No authorization required
 
 <a name="searchVAT"></a>
 # **searchVAT**
-> VatSearchResponse searchVAT(license, guid, company, opts)
+> VatSearchResponse searchVAT(company, opts)
 
 Find VAT number and company information by name
 
@@ -128,12 +128,14 @@ Finds the VAT number and additional company information by the company&#39;s nam
 ### Example
 ```javascript
 var datamill-js-client = require('datamill-js-client');
+var defaultClient = datamill-js-client.ApiClient.default;
+
+// Configure HTTP basic authorization: APISecurity
+var APISecurity = defaultClient.authentications['APISecurity'];
+APISecurity.username = 'YOUR USERNAME';
+APISecurity.password = 'YOUR PASSWORD';
 
 var apiInstance = new datamill-js-client.VATApi();
-
-var license = "license_example"; // String | The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-
-var guid = "guid_example"; // String | The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
 
 var company = "company_example"; // String | The name of an company. You may enter the fully qualified name or only partial information.
 
@@ -151,15 +153,13 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-apiInstance.searchVAT(license, guid, company, opts, callback);
+apiInstance.searchVAT(company, opts, callback);
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **license** | **String**| The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
- **guid** | **String**| The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request.  | 
  **company** | **String**| The name of an company. You may enter the fully qualified name or only partial information. | 
  **city** | **String**| The city where the company&#39;s headquarters is located. | [optional] 
  **countryCode** | **String**| ISO 3166-1 alpha-2 country code to specify in which country to look for. Possible countries are: **AT, BE, CZ, DK, FI, GB, GR, HU, IT, LU, MT, SI**  | [optional] 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[APISecurity](../README.md#APISecurity)
 
 ### HTTP request headers
 
