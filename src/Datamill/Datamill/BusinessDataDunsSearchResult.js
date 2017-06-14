@@ -45,7 +45,7 @@
   /**
    * The BusinessDataDunsSearchResult model module.
    * @module Datamill/Datamill/BusinessDataDunsSearchResult
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

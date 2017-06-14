@@ -34,7 +34,7 @@
     if (!root.datamill-js-client) {
       root.datamill-js-client = {};
     }
-    root.datamill-js-client.VatCheckResponse = factory(root.datamill-js-client.ApiClient);
+    root.datamill-js-client.PhoneticCodeGetResponse = factory(root.datamill-js-client.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
@@ -43,67 +43,47 @@
 
 
   /**
-   * The VatCheckResponse model module.
-   * @module Datamill/Datamill/VatCheckResponse
+   * The PhoneticCodeGetResponse model module.
+   * @module Datamill/Datamill/PhoneticCodeGetResponse
    * @version 1.6.5
    */
 
   /**
-   * Constructs a new <code>VatCheckResponse</code>.
-   * Response of successful transformation request for /vat/check
-   * @alias module:Datamill/Datamill/VatCheckResponse
+   * Constructs a new <code>PhoneticCodeGetResponse</code>.
+   * Response of successful transformation request for /phonetic/code/get
+   * @alias module:Datamill/Datamill/PhoneticCodeGetResponse
    * @class
-   * @param valid {String} Flag if the VAT number is valid or not [**0**, **1**]
-   * @param countrycode {String} ISO 3166-1 alpha-2 country code
-   * @param vatnumber {String} Vat number part without country code
+   * @param phoneticCodes {Array.<String>} The phonetic codes for each word of the input text 
    */
-  var exports = function(valid, countrycode, vatnumber) {
+  var exports = function(phoneticCodes) {
     var _this = this;
 
-    _this['valid'] = valid;
-    _this['countrycode'] = countrycode;
-    _this['vatnumber'] = vatnumber;
+    _this['phonetic_codes'] = phoneticCodes;
   };
 
   /**
-   * Constructs a <code>VatCheckResponse</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PhoneticCodeGetResponse</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:Datamill/Datamill/VatCheckResponse} obj Optional instance to populate.
-   * @return {module:Datamill/Datamill/VatCheckResponse} The populated <code>VatCheckResponse</code> instance.
+   * @param {module:Datamill/Datamill/PhoneticCodeGetResponse} obj Optional instance to populate.
+   * @return {module:Datamill/Datamill/PhoneticCodeGetResponse} The populated <code>PhoneticCodeGetResponse</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('valid')) {
-        obj['valid'] = ApiClient.convertToType(data['valid'], 'String');
-      }
-      if (data.hasOwnProperty('countrycode')) {
-        obj['countrycode'] = ApiClient.convertToType(data['countrycode'], 'String');
-      }
-      if (data.hasOwnProperty('vatnumber')) {
-        obj['vatnumber'] = ApiClient.convertToType(data['vatnumber'], 'String');
+      if (data.hasOwnProperty('phonetic_codes')) {
+        obj['phonetic_codes'] = ApiClient.convertToType(data['phonetic_codes'], ['String']);
       }
     }
     return obj;
   }
 
   /**
-   * Flag if the VAT number is valid or not [**0**, **1**]
-   * @member {String} valid
+   * The phonetic codes for each word of the input text 
+   * @member {Array.<String>} phonetic_codes
    */
-  exports.prototype['valid'] = undefined;
-  /**
-   * ISO 3166-1 alpha-2 country code
-   * @member {String} countrycode
-   */
-  exports.prototype['countrycode'] = undefined;
-  /**
-   * Vat number part without country code
-   * @member {String} vatnumber
-   */
-  exports.prototype['vatnumber'] = undefined;
+  exports.prototype['phonetic_codes'] = undefined;
 
 
 

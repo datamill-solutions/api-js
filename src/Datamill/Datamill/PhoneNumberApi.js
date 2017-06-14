@@ -42,7 +42,7 @@
   /**
    * PhoneNumber service.
    * @module Datamill/Datamill/PhoneNumberApi
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**
@@ -67,25 +67,13 @@
     /**
      * Verify mobile phone number
      * Real time validation of mobile numbers without triggering a call of send a text message.
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} phonenumber Mobile phone number to be verified.
      * @param {String} countrycode ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information.
      * @param {module:Datamill/Datamill/PhoneNumberApi~checkMobilePhoneCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/PhoneMobileCheckResponse}
      */
-    this.checkMobilePhone = function(license, guid, phonenumber, countrycode, callback) {
+    this.checkMobilePhone = function(phonenumber, countrycode, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling checkMobilePhone");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling checkMobilePhone");
-      }
 
       // verify the required parameter 'phonenumber' is set
       if (phonenumber == undefined || phonenumber == null) {
@@ -105,13 +93,11 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'phonenumber': phonenumber,
         'countrycode': countrycode
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = PhoneMobileCheckResponse;
@@ -134,8 +120,6 @@
     /**
      * Parse, format and validate phone numbers
      * Validates a given phone number and converts it to the canonical form. In addition the type of the phone number is determined (e.g. \&quot;fixed line\&quot;, \&quot;mobile\&quot;, ...). The number is not checked for existence. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} phonenumber Phone number to be formatted and validated
      * @param {String} countrycode ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information.
      * @param {Object} opts Optional parameters
@@ -145,19 +129,9 @@
      * @param {module:Datamill/Datamill/PhoneNumberApi~formatPhoneNumberCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/PhoneFormatResponse}
      */
-    this.formatPhoneNumber = function(license, guid, phonenumber, countrycode, opts, callback) {
+    this.formatPhoneNumber = function(phonenumber, countrycode, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling formatPhoneNumber");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling formatPhoneNumber");
-      }
 
       // verify the required parameter 'phonenumber' is set
       if (phonenumber == undefined || phonenumber == null) {
@@ -177,8 +151,6 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'phonenumber': phonenumber,
         'countrycode': countrycode,
         'format': opts['format'],
@@ -186,7 +158,7 @@
         'allowed_delimiters': opts['allowedDelimiters']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = PhoneFormatResponse;
@@ -209,24 +181,12 @@
     /**
      * International and national dial prefix
      * Resolves the national and international dial prefix for a country specified by the given ISO country code.
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} countrycode ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information.
      * @param {module:Datamill/Datamill/PhoneNumberApi~getPhoneCountryCodeCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/PhoneCountryCodeGetResponse}
      */
-    this.getPhoneCountryCode = function(license, guid, countrycode, callback) {
+    this.getPhoneCountryCode = function(countrycode, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling getPhoneCountryCode");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling getPhoneCountryCode");
-      }
 
       // verify the required parameter 'countrycode' is set
       if (countrycode == undefined || countrycode == null) {
@@ -241,12 +201,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'countrycode': countrycode
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = PhoneCountryCodeGetResponse;

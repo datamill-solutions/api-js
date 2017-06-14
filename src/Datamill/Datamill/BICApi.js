@@ -42,7 +42,7 @@
   /**
    * BIC service.
    * @module Datamill/Datamill/BICApi
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**
@@ -67,24 +67,12 @@
     /**
      * Check BIC for spelling
      * Checks the spelling of a given BIC (Business Identifier Code), also known as SWIFT code which is defined in the ISO 9362. The function does not verify if the BIC really exists, instead the format is checked for validity only. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} bic BIC to be checked
      * @param {module:Datamill/Datamill/BICApi~checkBICCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/BicCheckResponse}
      */
-    this.checkBIC = function(license, guid, bic, callback) {
+    this.checkBIC = function(bic, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling checkBIC");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling checkBIC");
-      }
 
       // verify the required parameter 'bic' is set
       if (bic == undefined || bic == null) {
@@ -99,12 +87,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'bic': bic
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = BicCheckResponse;

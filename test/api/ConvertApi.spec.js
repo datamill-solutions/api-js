@@ -99,6 +99,16 @@
         done();
       });
     });
+    describe('getPhoneticCode', function() {
+      it('should call getPhoneticCode successfully', function(done) {
+        //uncomment below and update the code to test getPhoneticCode
+        //instance.getPhoneticCode(pet, function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
   });
 
 }));

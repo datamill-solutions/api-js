@@ -45,7 +45,7 @@
   /**
    * The ErrorForbidden model module.
    * @module Datamill/Datamill/ErrorForbidden
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

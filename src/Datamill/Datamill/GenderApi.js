@@ -42,7 +42,7 @@
   /**
    * Gender service.
    * @module Datamill/Datamill/GenderApi
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**
@@ -67,24 +67,12 @@
     /**
      * Recognize gender by first name
      * Recognizes the gender of a given first name. (Works only with common first names in Germany, Austria and Switzerland) 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} firstname First name to recognize gender.
      * @param {module:Datamill/Datamill/GenderApi~getGenderCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/GenderGetResponse}
      */
-    this.getGender = function(license, guid, firstname, callback) {
+    this.getGender = function(firstname, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling getGender");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling getGender");
-      }
 
       // verify the required parameter 'firstname' is set
       if (firstname == undefined || firstname == null) {
@@ -99,12 +87,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'firstname': firstname
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = GenderGetResponse;
@@ -127,25 +113,13 @@
     /**
      * Recognize gender by first name (advanced)
      * Recognizes the gender of a given first name considering country specific peculiarities.
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} firstname First name to recognize gender.
      * @param {String} countrycode ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information.
      * @param {module:Datamill/Datamill/GenderApi~getGenderExtendedCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/GenderExtendedGetResponse}
      */
-    this.getGenderExtended = function(license, guid, firstname, countrycode, callback) {
+    this.getGenderExtended = function(firstname, countrycode, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling getGenderExtended");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling getGenderExtended");
-      }
 
       // verify the required parameter 'firstname' is set
       if (firstname == undefined || firstname == null) {
@@ -165,13 +139,11 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'firstname': firstname,
         'countrycode': countrycode
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = GenderExtendedGetResponse;

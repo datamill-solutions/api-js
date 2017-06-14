@@ -42,7 +42,7 @@
   /**
    * DUNS service.
    * @module Datamill/Datamill/DUNSApi
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**
@@ -67,25 +67,13 @@
     /**
      * Get marketing information by DUNS number
      * Get marketing information about a company (credit rating, PAYDEX score, demographic information, ...) based on the company&#39;s D-U-N-S number. In order to get the marketing information each request requires a reason. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} dunsNumber The D-U-N-S number you are looking for detailed information
      * @param {String} reasonCode Unique code describing the reason why you like to get detailed information about the specified company. Possible codes are:  * **1**: Credit decisions  * **2**: Credit check (intended business connection)  * **3**: Credit check (ongoing business connection)  * **4**: Debt collections  * **5**: Commercial credit insurance  * **6**: Insurance contract  * **7**: Leasing agreement  * **8**: Rental agreement 
      * @param {module:Datamill/Datamill/DUNSApi~getDUNSRatingCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/BusinessDataDunsRatingResponse}
      */
-    this.getDUNSRating = function(license, guid, dunsNumber, reasonCode, callback) {
+    this.getDUNSRating = function(dunsNumber, reasonCode, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling getDUNSRating");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling getDUNSRating");
-      }
 
       // verify the required parameter 'dunsNumber' is set
       if (dunsNumber == undefined || dunsNumber == null) {
@@ -105,13 +93,11 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'duns_number': dunsNumber,
         'reason_code': reasonCode
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = BusinessDataDunsRatingResponse;
@@ -134,25 +120,13 @@
     /**
      * Resolve company information by DUNS number
      * Resolves company information (official name, postal address, annual turnover, number of employees, ...) based on  the company&#39;s D-U-N-S number. In order to get the company information each request requires a reason. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} dunsNumber The D-U-N-S number you are looking for detailed information
      * @param {String} reasonCode Unique code describing the reason why you like to get detailed information about the specified company. Possible codes are:  * **1**: Credit decisions  * **2**: Credit check (intended business connection)  * **3**: Credit check (ongoing business connection)  * **4**: Debt collections  * **5**: Commercial credit insurance  * **6**: Insurance contract  * **7**: Leasing agreement  * **8**: Rental agreement 
      * @param {module:Datamill/Datamill/DUNSApi~resolveDUNSCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/BusinessDataDunsResolveResponse}
      */
-    this.resolveDUNS = function(license, guid, dunsNumber, reasonCode, callback) {
+    this.resolveDUNS = function(dunsNumber, reasonCode, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling resolveDUNS");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling resolveDUNS");
-      }
 
       // verify the required parameter 'dunsNumber' is set
       if (dunsNumber == undefined || dunsNumber == null) {
@@ -172,13 +146,11 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'duns_number': dunsNumber,
         'reason_code': reasonCode
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = BusinessDataDunsResolveResponse;
@@ -201,8 +173,6 @@
     /**
      * Find DUNS number and company information by name
      * Finds the D-U-N-S number and additional company information by the company&#39;s name. Optionally a filter for the headquarters location can be added to get a more accurate response. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} countryCode ISO 3166-1 alpha-2 country code e.g. &#39;US&#39;. Please see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 for further information.
      * @param {Object} opts Optional parameters
      * @param {String} opts.companyName The company name you are looking for or relevant parts of it (may be empty if the duns_number is set)
@@ -214,19 +184,9 @@
      * @param {module:Datamill/Datamill/DUNSApi~searchDUNSCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/BusinessDataDunsSearchResponse}
      */
-    this.searchDUNS = function(license, guid, countryCode, opts, callback) {
+    this.searchDUNS = function(countryCode, opts, callback) {
       opts = opts || {};
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling searchDUNS");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling searchDUNS");
-      }
 
       // verify the required parameter 'countryCode' is set
       if (countryCode == undefined || countryCode == null) {
@@ -241,8 +201,6 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'company_name': opts['companyName'],
         'country_code': countryCode,
         'duns_number': opts['dunsNumber'],
@@ -252,7 +210,7 @@
         'street': opts['street']
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = BusinessDataDunsSearchResponse;

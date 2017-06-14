@@ -45,7 +45,7 @@
   /**
    * The ErrorNotFound model module.
    * @module Datamill/Datamill/ErrorNotFound
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

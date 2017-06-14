@@ -24,69 +24,53 @@
 
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define(['Datamill/ApiClient'], factory);
+    // AMD.
+    define(['expect.js', '../../src/index'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'));
+    factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    if (!root.datamill-js-client) {
-      root.datamill-js-client = {};
-    }
-    root.datamill-js-client.SocialMediaActivitiesGetLocation = factory(root.datamill-js-client.ApiClient);
+    factory(root.expect, root.datamill-js-client);
   }
-}(this, function(ApiClient) {
+}(this, function(expect, datamill-js-client) {
   'use strict';
 
+  var instance;
 
+  beforeEach(function() {
+    instance = new datamill-js-client.PhoneticCodeGetResponse();
+  });
 
-
-  /**
-   * The SocialMediaActivitiesGetLocation model module.
-   * @module Datamill/Datamill/SocialMediaActivitiesGetLocation
-   * @version 1.6.5
-   */
-
-  /**
-   * Constructs a new <code>SocialMediaActivitiesGetLocation</code>.
-   * Collection of information about the geo-location the person lives in.
-   * @alias module:Datamill/Datamill/SocialMediaActivitiesGetLocation
-   * @class
-   */
-  var exports = function() {
-    var _this = this;
-
-
-  };
-
-  /**
-   * Constructs a <code>SocialMediaActivitiesGetLocation</code> from a plain JavaScript object, optionally creating a new instance.
-   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-   * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:Datamill/Datamill/SocialMediaActivitiesGetLocation} obj Optional instance to populate.
-   * @return {module:Datamill/Datamill/SocialMediaActivitiesGetLocation} The populated <code>SocialMediaActivitiesGetLocation</code> instance.
-   */
-  exports.constructFromObject = function(data, obj) {
-    if (data) {
-      obj = obj || new exports();
-
-      if (data.hasOwnProperty('display_name')) {
-        obj['display_name'] = ApiClient.convertToType(data['display_name'], 'String');
-      }
-    }
-    return obj;
+  var getProperty = function(object, getter, property) {
+    // Use getter method if present; otherwise, get the property directly.
+    if (typeof object[getter] === 'function')
+      return object[getter]();
+    else
+      return object[property];
   }
 
-  /**
-   * Single line address of all address parts found by all social media platforms
-   * @member {String} display_name
-   */
-  exports.prototype['display_name'] = undefined;
+  var setProperty = function(object, setter, property, value) {
+    // Use setter method if present; otherwise, set the property directly.
+    if (typeof object[setter] === 'function')
+      object[setter](value);
+    else
+      object[property] = value;
+  }
 
+  describe('PhoneticCodeGetResponse', function() {
+    it('should create an instance of PhoneticCodeGetResponse', function() {
+      // uncomment below and update the code to test PhoneticCodeGetResponse
+      //var instane = new datamill-js-client.PhoneticCodeGetResponse();
+      //expect(instance).to.be.a(datamill-js-client.PhoneticCodeGetResponse);
+    });
 
+    it('should have the property phoneticCodes (base name: "phonetic_codes")', function() {
+      // uncomment below and update the code to test the property phoneticCodes
+      //var instane = new datamill-js-client.PhoneticCodeGetResponse();
+      //expect(instance).to.be();
+    });
 
-  return exports;
+  });
+
 }));
-
-

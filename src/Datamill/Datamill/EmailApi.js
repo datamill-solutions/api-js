@@ -42,7 +42,7 @@
   /**
    * Email service.
    * @module Datamill/Datamill/EmailApi
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**
@@ -67,24 +67,12 @@
     /**
      * Check email syntax and mail server domain
      * Checks the spelling of an email address to detect typos and spelling errors. In addition if the email address has a valid syntax its mail server is determined and checked for existence. The mail server itself will be compared with a list of disposable providers to detect addresses with a short lifetime. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} email The email address to be checked
      * @param {module:Datamill/Datamill/EmailApi~checkEmailDomainCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/EmailDomainCheckResponse}
      */
-    this.checkEmailDomain = function(license, guid, email, callback) {
+    this.checkEmailDomain = function(email, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling checkEmailDomain");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling checkEmailDomain");
-      }
 
       // verify the required parameter 'email' is set
       if (email == undefined || email == null) {
@@ -99,12 +87,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'email': email
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = EmailDomainCheckResponse;
@@ -127,24 +113,12 @@
     /**
      * Check email syntax, mail server domain and mailbox itself
      * Checks the spelling of an email address to detect typos and spelling errors. If the email address has a valid syntax its mail server is determined and checked for existence. The mail server itself will be compared with a list of disposable providers to detect addresses with a short lifetime. Additionally the mail server will be checked if an email for the given mailbox can be received. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} email The email address to be checked
      * @param {module:Datamill/Datamill/EmailApi~checkEmailMailboxCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/EmailExtendedCheckResponse}
      */
-    this.checkEmailMailbox = function(license, guid, email, callback) {
+    this.checkEmailMailbox = function(email, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling checkEmailMailbox");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling checkEmailMailbox");
-      }
 
       // verify the required parameter 'email' is set
       if (email == undefined || email == null) {
@@ -159,12 +133,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'email': email
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = EmailExtendedCheckResponse;
@@ -187,24 +159,12 @@
     /**
      * Check email syntax
      * Checks the spelling of an email address to detect typos and spelling errors. 
-     * @param {String} license The license key is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
-     * @param {String} guid The guid is part of the authentication key pair consisting of license and guid (global unique identifier). These two keys are used as your personal API keys. Note that every API request requires both keys, so you will need to include them in each request. 
      * @param {String} email The email address to be checked
      * @param {module:Datamill/Datamill/EmailApi~checkEmailSyntaxCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link module:Datamill/Datamill/EmailSyntaxCheckResponse}
      */
-    this.checkEmailSyntax = function(license, guid, email, callback) {
+    this.checkEmailSyntax = function(email, callback) {
       var postBody = null;
-
-      // verify the required parameter 'license' is set
-      if (license == undefined || license == null) {
-        throw new Error("Missing the required parameter 'license' when calling checkEmailSyntax");
-      }
-
-      // verify the required parameter 'guid' is set
-      if (guid == undefined || guid == null) {
-        throw new Error("Missing the required parameter 'guid' when calling checkEmailSyntax");
-      }
 
       // verify the required parameter 'email' is set
       if (email == undefined || email == null) {
@@ -219,12 +179,10 @@
       var headerParams = {
       };
       var formParams = {
-        'license': license,
-        'guid': guid,
         'email': email
       };
 
-      var authNames = [];
+      var authNames = ['APISecurity'];
       var contentTypes = ['multipart/form-data'];
       var accepts = ['application/json'];
       var returnType = EmailSyntaxCheckResponse;

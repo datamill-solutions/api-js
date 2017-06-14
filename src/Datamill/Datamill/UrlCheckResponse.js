@@ -45,7 +45,7 @@
   /**
    * The UrlCheckResponse model module.
    * @module Datamill/Datamill/UrlCheckResponse
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**
@@ -63,7 +63,7 @@
    * @param starttransferTime {Number} Time to first byte in seconds
    * @param primaryIp {String} IP address of the most recent connection
    * @param primaryPort {Number} Destination port of the connection
-   * @param downloadContentLength {Number} Number of bytes to download from the resource (-1 means no information available)
+   * @param downloadContentLength {Number} Number of bytes to download from the resource (-1 means no information available; will be removed in future versions / deprecated)
    * @param contentType {String} Content type of the requested resource
    * @param redirects {Array.<Object>} Array collection of all urls including redirects
    * @param parameters {Array.<Object>} Array collection of all url parameters
@@ -195,7 +195,7 @@
    */
   exports.prototype['primary_port'] = undefined;
   /**
-   * Number of bytes to download from the resource (-1 means no information available)
+   * Number of bytes to download from the resource (-1 means no information available; will be removed in future versions / deprecated)
    * @member {Number} download_content_length
    */
   exports.prototype['download_content_length'] = undefined;

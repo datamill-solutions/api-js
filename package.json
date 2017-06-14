@@ -1,6 +1,6 @@
 {
   "name": "datamill-js-client",
-  "version": "0.0.2",
+  "version": "1.6.5",
   "description": "Client library of datamill solutions API",
   "license": "Apache-2.0",
   "main": "src/Datamill/index.js",

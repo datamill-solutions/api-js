@@ -45,7 +45,7 @@
   /**
    * The ErrorQuotaExceeded model module.
    * @module Datamill/Datamill/ErrorQuotaExceeded
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**
