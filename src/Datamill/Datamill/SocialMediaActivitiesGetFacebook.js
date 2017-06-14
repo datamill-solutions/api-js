@@ -45,7 +45,7 @@
   /**
    * The SocialMediaActivitiesGetFacebook model module.
    * @module Datamill/Datamill/SocialMediaActivitiesGetFacebook
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

@@ -42,7 +42,7 @@
   /**
    * IBAN service.
    * @module Datamill/Datamill/IBANApi
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

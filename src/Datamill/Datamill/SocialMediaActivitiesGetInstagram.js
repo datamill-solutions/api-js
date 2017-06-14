@@ -45,7 +45,7 @@
   /**
    * The SocialMediaActivitiesGetInstagram model module.
    * @module Datamill/Datamill/SocialMediaActivitiesGetInstagram
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

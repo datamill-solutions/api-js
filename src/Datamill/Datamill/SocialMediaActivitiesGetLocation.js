@@ -45,7 +45,7 @@
   /**
    * The SocialMediaActivitiesGetLocation model module.
    * @module Datamill/Datamill/SocialMediaActivitiesGetLocation
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

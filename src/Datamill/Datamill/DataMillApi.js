@@ -42,7 +42,7 @@
   /**
    * DataMill service.
    * @module Datamill/Datamill/DataMillApi
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

@@ -45,7 +45,7 @@
   /**
    * The ConvertLowerCaseResponse model module.
    * @module Datamill/Datamill/ConvertLowerCaseResponse
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

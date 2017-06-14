@@ -41,7 +41,7 @@
 
   /**
    * @module Datamill/ApiClient
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

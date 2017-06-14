@@ -45,7 +45,7 @@
   /**
    * The AddressHouseNumberExtractResponse model module.
    * @module Datamill/Datamill/AddressHouseNumberExtractResponse
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**

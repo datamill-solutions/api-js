@@ -45,7 +45,7 @@
   /**
    * The PhoneticCodeGetResponse model module.
    * @module Datamill/Datamill/PhoneticCodeGetResponse
-   * @version 0.0.2
+   * @version 1.6.5
    */
 
   /**
