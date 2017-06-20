@@ -80,7 +80,7 @@ api.extractHouseNumber(opts, callback);
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-beta.methis.at*
+All URIs are relative to *https://api.methis.at*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
