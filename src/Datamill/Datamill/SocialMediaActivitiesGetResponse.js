@@ -53,7 +53,7 @@
    * Response of successful transformation request for /social-media/activities/get
    * @alias module:Datamill/Datamill/SocialMediaActivitiesGetResponse
    * @class
-   * @param status {module:Datamill/Datamill/SocialMediaActivitiesGetResponse.StatusEnum} Unique status code describing the response  * **1**: Social media activities found and present in the response,  * **-1**: No social media activities found for the requested email address (in this case all following response keys except the status_description are not present),  * **-2**: Your requested is queued and a response will be available within the next 12 hours (in this case all following response keys except the status_description are not present) 
+   * @param status {module:Datamill/Datamill/SocialMediaActivitiesGetResponse.StatusEnum} Unique status code describing the response  * **1**: Social media activities found and present in the response,  * **-1**: No social media activities found for the requested email address (in this case all following response keys except the status_description are not present),  * **-2**: Your request is queued and a response will be available within the next 12 hours (in this case all following response keys except the status_description are not present),  * **-3**: Your requested email address is invalid (please check that the email is url encoded). 
    * @param statusDescription {String} Short description of the status code
    */
   var exports = function(status, statusDescription) {
@@ -161,7 +161,7 @@
   }
 
   /**
-   * Unique status code describing the response  * **1**: Social media activities found and present in the response,  * **-1**: No social media activities found for the requested email address (in this case all following response keys except the status_description are not present),  * **-2**: Your requested is queued and a response will be available within the next 12 hours (in this case all following response keys except the status_description are not present) 
+   * Unique status code describing the response  * **1**: Social media activities found and present in the response,  * **-1**: No social media activities found for the requested email address (in this case all following response keys except the status_description are not present),  * **-2**: Your request is queued and a response will be available within the next 12 hours (in this case all following response keys except the status_description are not present),  * **-3**: Your requested email address is invalid (please check that the email is url encoded). 
    * @member {module:Datamill/Datamill/SocialMediaActivitiesGetResponse.StatusEnum} status
    */
   exports.prototype['status'] = undefined;
@@ -277,7 +277,12 @@
      * value: -2
      * @const
      */
-    "-2": -2  };
+    "-2": -2,
+    /**
+     * value: -3
+     * @const
+     */
+    "-3": -3  };
 
 
   return exports;
