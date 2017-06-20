@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **Number** | Unique status code describing the response  * **1**: Social media activities found and present in the response,  * **-1**: No social media activities found for the requested email address (in this case all following response keys except the status_description are not present),  * **-2**: Your requested is queued and a response will be available within the next 12 hours (in this case all following response keys except the status_description are not present)  | 
+**status** | **Number** | Unique status code describing the response  * **1**: Social media activities found and present in the response,  * **-1**: No social media activities found for the requested email address (in this case all following response keys except the status_description are not present),  * **-2**: Your request is queued and a response will be available within the next 12 hours (in this case all following response keys except the status_description are not present),  * **-3**: Your requested email address is invalid (please check that the email is url encoded).  | 
 **statusDescription** | **String** | Short description of the status code | 
 **name** | **String** | First name and last name of the person | [optional] 
 **email** | **String** | The requested email address | [optional] 
@@ -35,6 +35,8 @@ Name | Type | Description | Notes
 * `-1` (value: `-1`)
 
 * `-2` (value: `-2`)
+
+* `-3` (value: `-3`)
 
 
 
