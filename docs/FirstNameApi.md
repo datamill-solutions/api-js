@@ -1,6 +1,6 @@
 # datamill-js-client.FirstNameApi
 
-All URIs are relative to *https://api-beta.methis.at*
+All URIs are relative to *https://api.methis.at*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
